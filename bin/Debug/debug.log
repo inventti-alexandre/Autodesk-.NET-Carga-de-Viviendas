@@ -1,0 +1,7 @@
+[0106/131706:ERROR:cache_util_win.cc(48)] Unable to move the cache: 0
+[0106/131706:ERROR:backend_impl.cc(146)] Unable to move cache folder
+[0106/131706:ERROR:backend_impl.cc(287)] Unable to create cache
+[0111/172028:WARNING:backend_impl.cc(1946)] Destroying invalid entry.
+[0111/172028:WARNING:backend_impl.cc(1946)] Destroying invalid entry.
+[0314/085147:WARNING:backend_impl.cc(1660)] Messed up entry found.
+[0314/085147:WARNING:backend_impl.cc(1946)] Destroying invalid entry.

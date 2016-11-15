@@ -1,0 +1,7 @@
+c:\users\mnieto\documents\visual studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.dll
+c:\users\mnieto\documents\visual studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.pdb
+c:\users\mnieto\documents\visual studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Datos_Iniciales.SelDatosIniciales.resources
+c:\users\mnieto\documents\visual studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Properties.Resources.resources
+c:\users\mnieto\documents\visual studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.csproj.GenerateResource.Cache
+c:\users\mnieto\documents\visual studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.dll
+c:\users\mnieto\documents\visual studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.pdb

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://esb.javer.com/CatFraccionamientos/types" xmlns:com="http://esb.javer.com/common" elementFormDefault="qualified" targetNamespace="http://esb.javer.com/CatFraccionamientos/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://192.168.44.244:10711/soa-infra/services/catalog/CatFraccionamientos/soap?XSD=../../Schemas/Common.xsd" namespace="http://esb.javer.com/common" />
+  <xsd:element name="GetFraccionamientosRq">
+    <xsd:complexType>
+      <xsd:complexContent mixed="false">
+        <xsd:extension base="com:RequestType">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Username" type="com:StringLength1to32">
+              <xsd:annotation>
+                <xsd:documentation>Nombre de usuario.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="RequestedAccess" type="com:StringLength1to32">
+              <xsd:annotation>
+                <xsd:documentation>Permiso con el que se desea obtener los fraccionamientos.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="IP_Address" type="com:StringLength1to32">
+              <xsd:annotation>
+                <xsd:documentation>Dirección IP de la computadora cliente.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+          <xsd:attribute name="QueryType" type="com:StringLength1to64" />
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetFraccionamientosRs">
+    <xsd:complexType>
+      <xsd:complexContent mixed="false">
+        <xsd:extension base="com:ResponseType">
+          <xsd:sequence>
+            <xsd:element name="Fraccionamientos" type="com:FraccionamientoListType" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

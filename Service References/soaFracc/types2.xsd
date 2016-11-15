@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://esb.javer.com/CatFraccionamientos/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="../../Schemas/catalog/CatFraccionamientos.xsd" />
+</xsd:schema>

@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49367091-67CB-403A-87F1-711A4CD76088}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PluginInsViviendas_UNO</RootNamespace>
+    <AssemblyName>PluginInsViviendas_UNO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="accoremgd">
+      <HintPath>..\..\..\..\..\Desktop\REFERENCIAS\accoremgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acdbmgd">
+      <HintPath>..\..\..\..\..\Desktop\REFERENCIAS\acdbmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acmgd">
+      <HintPath>..\..\..\..\..\Desktop\REFERENCIAS\acmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xlsConn">
+      <HintPath>..\..\AutoCAD API\xlsConn.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands.cs" />
+    <Compile Include="Controlador\ConfiguraServicio.cs" />
+    <Compile Include="Controlador\MetodosPrototipos.cs" />
+    <Compile Include="Modelo\EncDatosIniciales.cs" />
+    <Compile Include="Modelo\EncDatosServicio.cs" />
+    <Compile Include="Modelo\IndexColumn.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Multifamiliar\MBtViviendasError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Multifamiliar\MBtViviendasError.Designer.cs">
+      <DependentUpon>MBtViviendasError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Multifamiliar\MDatosFinales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Multifamiliar\MDatosFinales.Designer.cs">
+      <DependentUpon>MDatosFinales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Multifamiliar\MPntOrdenaViviendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Multifamiliar\MPntOrdenaViviendas.Designer.cs">
+      <DependentUpon>MPntOrdenaViviendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Multifamiliar\MSeleccionaPlano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Multifamiliar\MSeleccionaPlano.Designer.cs">
+      <DependentUpon>MSeleccionaPlano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Multifamiliar\MSelPrototipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Multifamiliar\MSelPrototipos.Designer.cs">
+      <DependentUpon>MSelPrototipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Multifamiliar\MBtRelPrototipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Multifamiliar\MBtRelPrototipo.Designer.cs">
+      <DependentUpon>MBtRelPrototipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Multifamiliar\MSPAtras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Multifamiliar\MSPAtras.Designer.cs">
+      <DependentUpon>MSPAtras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\SelDatosIniciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\SelDatosIniciales.Designer.cs">
+      <DependentUpon>SelDatosIniciales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\DatosSesion.cs" />
+    <Compile Include="Vista\BitacoraErrores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\BitacoraErrores.Designer.cs">
+      <DependentUpon>BitacoraErrores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\EncDatosConfiguracion.cs" />
+    <Compile Include="Modelo\EncDatosPlano.cs" />
+    <Compile Include="Controlador\MetodosPlano.cs" />
+    <Compile Include="Vista\Unifamiliar\USelDatosPlano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Unifamiliar\USelDatosPlano.Designer.cs">
+      <DependentUpon>USelDatosPlano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\MetodosFinales.cs" />
+    <Compile Include="Modelo\EncapsulaBitacora.cs" />
+    <Compile Include="Vista\Unifamiliar\UBtViviendasError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Unifamiliar\UBtViviendasError.Designer.cs">
+      <DependentUpon>UBtViviendasError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\CargandoViviendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\CargandoViviendas.Designer.cs">
+      <DependentUpon>CargandoViviendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Unifamiliar\UDatosFinales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Unifamiliar\UDatosFinales.Designer.cs">
+      <DependentUpon>UDatosFinales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\soaBulk\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\soaFracc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\soaPrototipos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\soaBulk\Common1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\soaBulk\ManageHome1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\soaBulk\PluginInsViviendas_UNO.soaBulk.BulkUploadRs.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\soaBulk\soap1.wsdl" />
+    <None Include="Service References\soaFracc\CatFraccionamientos3.wsdl" />
+    <None Include="Service References\soaFracc\CatFraccionamientos31.wsdl" />
+    <None Include="Service References\soaFracc\CatFraccionamientos32.wsdl" />
+    <None Include="Service References\soaFracc\common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\soaFracc\PluginInsViviendas_UNO.soaFracc.GetFraccionamientosRs.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\soaFracc\types2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\soaFracc\types21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\soaPrototipos\CatPrototipos.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\soaPrototipos\Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\soaPrototipos\PluginInsViviendas_UNO.soaPrototipos.GetPrototiposRs.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\soaPrototipos\soap.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Multifamiliar\MBtViviendasError.resx">
+      <DependentUpon>MBtViviendasError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Multifamiliar\MDatosFinales.resx">
+      <DependentUpon>MDatosFinales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Multifamiliar\MPntOrdenaViviendas.resx">
+      <DependentUpon>MPntOrdenaViviendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Multifamiliar\MSeleccionaPlano.resx">
+      <DependentUpon>MSeleccionaPlano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Multifamiliar\MSelPrototipos.resx">
+      <DependentUpon>MSelPrototipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Multifamiliar\MBtRelPrototipo.resx">
+      <DependentUpon>MBtRelPrototipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Multifamiliar\MSPAtras.resx">
+      <DependentUpon>MSPAtras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\SelDatosIniciales.resx">
+      <DependentUpon>SelDatosIniciales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\BitacoraErrores.resx">
+      <DependentUpon>BitacoraErrores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Unifamiliar\USelDatosPlano.resx">
+      <DependentUpon>USelDatosPlano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Unifamiliar\UBtViviendasError.resx">
+      <DependentUpon>UBtViviendasError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\CargandoViviendas.resx">
+      <DependentUpon>CargandoViviendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Unifamiliar\UDatosFinales.resx">
+      <DependentUpon>UDatosFinales.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preloader.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cargando.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\soaFracc\service1.xml" />
+    <None Include="Resources\uploaded2.png" />
+    <None Include="Resources\next-icon.png" />
+    <None Include="Resources\more1.png" />
+    <None Include="Resources\multiple_Select.png" />
+    <None Include="Resources\nextPBlue.png" />
+    <None Include="Resources\nextPGray.png" />
+    <None Include="Resources\PrototipoAzul.png" />
+    <None Include="Resources\refreshGray.png" />
+    <None Include="Resources\ReorderBlueIcon.png" />
+    <None Include="Resources\roundedrectangle.png" />
+    <None Include="Resources\select.png" />
+    <None Include="Resources\ViewRelationIcon.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\LogoOficialNuevo.png" />
+    <None Include="Resources\NextFinal.png" />
+    <None Include="Resources\nextbtn.png" />
+    <None Include="Resources\nextPGray.bmp" />
+    <None Include="Resources\uploaded %282%291.png" />
+    <None Include="Resources\roundExc.png" />
+    <None Include="Resources\ReorderGrayIcon.png" />
+    <None Include="Resources\ReorderRedIcon.png" />
+    <None Include="Resources\ViewIcon.png" />
+    <None Include="Resources\ViewBlueIcon.png" />
+    <None Include="Resources\PrototipoAzulSee.png" />
+    <None Include="Resources\sort.png" />
+    <None Include="Resources\orderIconnew.png" />
+    <None Include="Resources\orderIcon1.png" />
+    <None Include="Resources\orderIcon.png" />
+    <None Include="Resources\orderNumber.png" />
+    <None Include="Resources\OrderBy.png" />
+    <None Include="Resources\PrototipoAzulListo1.png" />
+    <None Include="Resources\PrototipoAzulListo.png" />
+    <None Include="Resources\Relational1.png" />
+    <None Include="Resources\Relational.png" />
+    <None Include="Resources\PrototipoAzulDone1.png" />
+    <None Include="Resources\PrototipoAzulDone.png" />
+    <None Include="Resources\relate.png" />
+    <None Include="Resources\NextSquareBtn.png" />
+    <None Include="Resources\PrototipoVerde.png" />
+    <None Include="Resources\NextBlack.png" />
+    <None Include="Resources\nextarrow.png" />
+    <None Include="Resources\relation.png" />
+    <None Include="Resources\Prototipo.png" />
+    <None Include="Resources\nextGray.png" />
+    <None Include="Resources\next.png" />
+    <None Include="Resources\NextBlue.png" />
+    <None Include="Resources\skyblueLine.png" />
+    <None Include="Resources\Newnext1.png" />
+    <None Include="Resources\nextNewCircle.png" />
+    <None Include="Resources\newline.png" />
+    <None Include="Resources\ok1.png" />
+    <None Include="Resources\uploaded1.png" />
+    <None Include="Resources\v-line.png" />
+    <None Include="Resources\uploaded %282%29.png" />
+    <None Include="Resources\uploaded.png" />
+    <None Include="Service References\soaBulk\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\soaBulk\configuration.svcinfo" />
+    <None Include="Service References\soaBulk\configuration91.svcinfo" />
+    <None Include="Service References\soaPrototipos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\soaPrototipos\configuration.svcinfo" />
+    <None Include="Service References\soaPrototipos\configuration91.svcinfo" />
+    <None Include="Resources\online.png" />
+    <None Include="Resources\offline.png" />
+    <None Include="Resources\power.png" />
+    <None Include="Service References\soaFracc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\soaFracc\configuration.svcinfo" />
+    <None Include="Service References\soaFracc\configuration91.svcinfo" />
+    <None Include="Resources\more.png" />
+    <None Include="Resources\view.png" />
+    <None Include="Resources\ok.png" />
+    <None Include="Resources\look.png" />
+    <None Include="Resources\search-icon-black.png" />
+    <None Include="Resources\search_l2.png" />
+    <None Include="Resources\search_l.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\pages_warning.png" />
+    <None Include="Resources\ubicacion.png" />
+    <None Include="Resources\manzana.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\ask.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\change.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\casasjaver.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Home.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\btnHome.png" />
+    <None Include="Resources\decimal.png" />
+    <None Include="Resources\adjust.png" />
+    <None Include="Resources\btndireccion.png" />
+    <None Include="Resources\icono_buscar.png" />
+    <None Include="Resources\icono_buscar %282%29.png" />
+    <None Include="Resources\clear.png" />
+    <None Include="Resources\copy.png" />
+    <None Include="Resources\copy2.png" />
+    <None Include="Resources\clear_list.png" />
+    <None Include="Resources\btndown.png" />
+    <None Include="Resources\docleft1.png" />
+    <None Include="Resources\erase1.png" />
+    <None Include="Resources\connect.png" />
+    <None Include="Resources\l3.gif" />
+    <None Include="Resources\Loading-Circle.gif" />
+    <None Include="Resources\cargando1.gif" />
+    <None Include="Resources\cargando2.gif" />
+    <None Include="Resources\cargar1.gif" />
+    <None Include="Resources\Home1.png" />
+    <None Include="Resources\excel.png" />
+    <None Include="Resources\excel_icono.png" />
+    <None Include="Resources\favicon.ico" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\double_arrow_right1.png" />
+    <None Include="Resources\double_arrow_left1.png" />
+    <None Include="Resources\checkgreen.png" />
+    <None Include="Resources\checkblue.png" />
+    <None Include="Resources\checkgray.png" />
+    <None Include="Resources\disablenext.png" />
+    <None Include="Resources\DisablenextNewCircle.png" />
+    <None Include="Resources\DisNewNextC.png" />
+    <None Include="Resources\greenLine.png" />
+    <None Include="Resources\horizontalline.png" />
+    <None Include="Resources\Edificio.png" />
+    <None Include="Resources\globalconnections.png" />
+    <None Include="Resources\connections.png" />
+    <None Include="Resources\horizontalgreenline.png" />
+    <None Include="Resources\connectionsVerde.png" />
+    <None Include="Resources\connectionBlue.png" />
+    <None Include="Resources\BtnSquareBlue.png" />
+    <None Include="Resources\BtnSquareGray.png" />
+    <None Include="Resources\connectionGray.png" />
+    <None Include="Resources\BtnSquareBlue1.png" />
+    <None Include="Resources\BtnSquareBlack.png" />
+    <None Include="Resources\layout.png" />
+    <None Include="Resources\Instance.png" />
+    <None Include="Resources\Instancia.png" />
+    <None Include="Resources\layout_azul.png" />
+    <None Include="Resources\LayoutAzulDone.png" />
+    <None Include="Resources\elements_cascade.png" />
+    <None Include="Resources\InstanciaDone.png" />
+    <None Include="Resources\Greencheck.png" />
+    <None Include="Resources\BlueCheck.png" />
+    <None Include="Resources\layoutGray.png" />
+    <None Include="Resources\Checklsit.png" />
+    <None Include="Resources\listicon.png" />
+    <None Include="Resources\ListDone.png" />
+    <None Include="Resources\connectRelation.png" />
+    <None Include="Resources\delete_row.png" />
+    <None Include="Resources\insert_field_icon.jpg" />
+    <None Include="Resources\listiconview.png" />
+    <None Include="Resources\listiconviewblue.png" />
+    <None Include="Resources\listiconviewblue1.png" />
+    <None Include="Resources\listiconviewblue2.png" />
+    <None Include="Resources\backicon.png" />
+    <None Include="Resources\012_restart-512.png" />
+    <None Include="Resources\filesDelete.png" />
+    <None Include="Resources\EraserIcon.png" />
+    <None Include="Resources\ClearEraser.png" />
+    <None Include="Resources\excel-2016.png" />
+    <None Include="Resources\ExcelNIcon.png" />
+    <None Include="Resources\export.gif" />
+    <None Include="Resources\loading22.gif" />
+    <None Include="Resources\loading-dots.gif" />
+    <None Include="Resources\1468633294_back1.png" />
+    <None Include="Resources\BlueCheck1.png" />
+    <None Include="Resources\btndireccion1.png" />
+    <None Include="Resources\btndown1.png" />
+    <None Include="Resources\btnHome1.png" />
+    <None Include="Resources\btnManzana1.png" />
+    <None Include="Resources\checkblue1.png" />
+    <None Include="Resources\checkgray1.png" />
+    <None Include="Resources\clear_list1.png" />
+    <None Include="Resources\copy1.png" />
+    <None Include="Resources\clear_list2.png" />
+    <None Include="Resources\fondo.PNG" />
+    <None Include="Resources\listiconGray.png" />
+    <None Include="Resources\load.gif" />
+    <None Include="Resources\listiconBlue.png" />
+    <None Include="Resources\layers_error.png" />
+    <None Include="Resources\horizontalgrayline.png" />
+    <None Include="Resources\horizontalblueline.png" />
+    <None Include="Resources\Greencheck1.png" />
+    <None Include="Resources\ExcelExport.png" />
+    <None Include="Resources\erase.png" />
+    <None Include="Resources\double_arrow_right_gray.png" />
+    <None Include="Resources\double_arrow_left_gray.png" />
+    <None Include="Resources\docleft.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\double_arrow_right.png" />
+    <None Include="Resources\double_arrow_left.png" />
+    <None Include="Resources\1468633294_back.png" />
+    <None Include="Resources\load-dots.gif" />
+    <None Include="Resources\btnManzana.png" />
+    <None Include="Resources\double_arrow_right11.png" />
+    <None Include="Resources\double_arrow_left11.png" />
+    <Content Include="Resources\LoadingCircle.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\soaBulk\" />
+    <WCFMetadataStorage Include="Service References\soaFracc\" />
+    <WCFMetadataStorage Include="Service References\soaPrototipos\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

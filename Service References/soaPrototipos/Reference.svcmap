@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="56de5c1c-37cb-4871-ac94-670b810f75d4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.44.49:10711/soa-infra/services/catalog/CatPrototipos/soap?WSDL" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="soap.wsdl" MetadataType="Wsdl" ID="9309b1e1-500d-47a6-96dd-175b88848a3a" SourceId="1" SourceUrl="http://192.168.44.49:10711/soa-infra/services/catalog/CatPrototipos/soap?WSDL" />
+    <MetadataFile FileName="CatPrototipos.xsd" MetadataType="Schema" ID="73dcc7ec-60bf-48db-a88c-73818aef9f9d" SourceId="1" SourceUrl="http://192.168.44.49:10711/soa-infra/services/catalog/CatPrototipos/soap?XSD=../../Schemas/catalog/CatPrototipos.xsd" />
+    <MetadataFile FileName="Common.xsd" MetadataType="Schema" ID="70546b26-4b1c-4adb-b5ed-355ab88151cc" SourceId="1" SourceUrl="http://192.168.44.49:10711/soa-infra/services/catalog/CatPrototipos/soap?XSD=../../Schemas/Common.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

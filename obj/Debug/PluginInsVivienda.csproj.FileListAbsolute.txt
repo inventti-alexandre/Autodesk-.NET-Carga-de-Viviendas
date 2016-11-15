@@ -1,0 +1,125 @@
+C:\Users\mnieto\documents\visual studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.dll
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.P1Datos_Iniciales.SelDatosIniciales.resources
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.P2_SeleccionPlano.BitacoraErrores.resources
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.P2_SeleccionPlano.SelDatosPlano.resources
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.P3_CompDatos.DatosFinales.resources
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Properties.Resources.resources
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsVivienda.csproj.GenerateResource.Cache
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.dll
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.pdb
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\preloader.gif
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\LoadingCircle.gif
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\fondo.PNG
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\Loading.gif
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\cargando.gif
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\manzana.png
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\ask.png
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\change.png
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\casasjaver.png
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\Home.png
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.dll
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.pdb
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\preloader.gif
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\LoadingCircle.gif
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\fondo.PNG
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\Loading.gif
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\cargando.gif
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\manzana.png
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\ask.png
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\change.png
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\casasjaver.png
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\Home.png
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.dll
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.pdb
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.P1Datos_Iniciales.SelDatosIniciales.resources
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.P2_SeleccionPlano.BitacoraErrores.resources
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.P2_SeleccionPlano.SelDatosPlano.resources
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.P3_CompDatos.DatosFinales.resources
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Properties.Resources.resources
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsVivienda.csproj.GenerateResource.Cache
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.dll
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.pdb
+C:\Users\mnieto\Documents\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsVivienda.csprojResolveAssemblyReference.cache
+C:\Users\Alejandro\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsVivienda.csprojResolveAssemblyReference.cache
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.pdb
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\preloader.gif
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\LoadingCircle.gif
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\fondo.PNG
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\Loading.gif
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\cargando.gif
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\manzana.png
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\ask.png
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\change.png
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\casasjaver.png
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\Home.png
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.dll.config
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\xlsConn.dll
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MSelPrototipos.resources
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.P1Datos_Iniciales.SelDatosIniciales.resources
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Properties.Resources.resources
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsVivienda.csproj.GenerateResource.Cache
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.dll
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.pdb
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.USelDatosPlano.resources
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.UBtViviendasError.resources
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.UCargandoViviendas.resources
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.UDatosFinales.resources
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MSeleccionaPlano.resources
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.BitacoraErrores.resources
+C:\Users\mnieto\Documents\Visual Studio 2012\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MBtRelPrototipo.resources
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\preloader.gif
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\LoadingCircle.gif
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\fondo.PNG
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\Loading.gif
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\cargando.gif
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\manzana.png
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\ask.png
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\change.png
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\casasjaver.png
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\Home.png
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.dll.config
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.dll
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.pdb
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsVivienda.csprojResolveAssemblyReference.cache
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MSeleccionaPlano.resources
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MSelPrototipos.resources
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MBtRelPrototipo.resources
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.P1Datos_Iniciales.SelDatosIniciales.resources
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.BitacoraErrores.resources
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.USelDatosPlano.resources
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.UBtViviendasError.resources
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.UCargandoViviendas.resources
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.UDatosFinales.resources
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Properties.Resources.resources
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsVivienda.csproj.GenerateResource.Cache
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.dll
+C:\Users\mnieto\Desktop\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.pdb
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\preloader.gif
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\LoadingCircle.gif
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\cargando.gif
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\manzana.png
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\ask.png
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\change.png
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\casasjaver.png
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\Home.png
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.dll.config
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.dll
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.pdb
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MSeleccionaPlano.resources
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MSelPrototipos.resources
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MBtRelPrototipo.resources
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.BitacoraErrores.resources
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.USelDatosPlano.resources
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.UBtViviendasError.resources
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.UDatosFinales.resources
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Properties.Resources.resources
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsVivienda.csproj.GenerateResource.Cache
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.dll
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.pdb
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MPntOrdenaViviendas.resources
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MSPAtras.resources
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.SelDatosIniciales.resources
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MDatosFinales.resources
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Vista.CargandoViviendas.resources
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MBtViviendasError.resources
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsVivienda.csprojResolveAssemblyReference.cache

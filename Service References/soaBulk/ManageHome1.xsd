@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://esb.javer.com/ManageHome/types" xmlns:com="http://esb.javer.com/common" elementFormDefault="qualified" targetNamespace="http://esb.javer.com/ManageHome/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://192.168.44.244:10711/soa-infra/services/default/ManageHome/soap?XSD=../Schemas/Common.xsd" namespace="http://esb.javer.com/common" />
+  <xsd:element name="BulkUploadRq">
+    <xsd:complexType>
+      <xsd:complexContent mixed="false">
+        <xsd:extension base="com:RequestType">
+          <xsd:sequence>
+            <xsd:element name="User" type="com:StringLength1to64" />
+            <xsd:element minOccurs="0" name="IpAddress" type="com:StringLength1to64" />
+            <xsd:element name="Fraccionamientos" type="com:FraccionamientoListType" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="BulkUploadRs">
+    <xsd:complexType>
+      <xsd:complexContent mixed="false">
+        <xsd:extension base="com:ResponseType">
+          <xsd:sequence>
+            <xsd:element name="RecordList">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="RecordHome">
+                    <xsd:complexType>
+                      <xsd:attribute name="Fraccionamiento" type="xsd:string" />
+                      <xsd:attribute name="Sector" type="xsd:string" />
+                      <xsd:attribute name="Etapa" type="xsd:string" />
+                      <xsd:attribute name="Prototipo" type="xsd:string" />
+                      <xsd:attribute name="Manzana" type="xsd:string" />
+                      <xsd:attribute name="NumeroLote" type="xsd:string" />
+                      <xsd:attribute name="NumeroInterior" type="xsd:string" />
+                      <xsd:attribute name="Direccion" type="xsd:string" />
+                      <xsd:attribute name="NumeroOficial" type="xsd:string" />
+                      <xsd:attribute name="CveUnicaVivienda" type="xsd:string" />
+                      <xsd:attribute name="Error" type="xsd:string" />
+                      <xsd:attribute name="FechaCarga" type="xsd:string" />
+                      <xsd:attribute name="ID_Archivo" type="xsd:string" />
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://esb.javer.com/common" elementFormDefault="qualified" targetNamespace="http://esb.javer.com/common" version="100" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="RequestType">
+    <xsd:attribute name="Version" type="StringLength1to32" />
+    <xsd:attribute name="RequestDate" type="xsd:dateTime">
+      <xsd:annotation>
+        <xsd:documentation>Indicates the creation date and time of the message in UTC using the following format specified by ISO 8601; YYYY-MM-DDThh:mm:ssZ with time values using the 24 hour clock (e.g. 20 November 2003, 1:59:38 pm UTC becomes 2003-11-20T13:59:38Z).</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="SourceSystem" type="StringLength1to64">
+      <xsd:annotation>
+        <xsd:documentation>A unique identifying value assigned by the creating system. The ID attribute may be used to reference a primary-key value within a database or in a particular implementation.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="TransactionID" type="StringLength1to128">
+      <xsd:annotation>
+        <xsd:documentation>Useful Identifier for the request tracking. Not required.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:complexType name="ResponseType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="Error" type="ErrorType" />
+    </xsd:sequence>
+    <xsd:attribute name="ResponseDate" type="xsd:dateTime">
+      <xsd:annotation>
+        <xsd:documentation>Indicates the creation date and time of the response message in UTC using the following format specified by ISO 8601; YYYY-MM-DDThh:mm:ssZ with time values using the 24 hour clock (e.g. 20 November 2003, 1:59:38 pm UTC becomes 2003-11-20T13:59:38Z).</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Success" type="xsd:boolean">
+      <xsd:annotation>
+        <xsd:documentation>Provides the result of the requested function. true= Process completed sucessfully. false= An error has been ocurred during the process. Inspect the Error element for error information.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="ESB_Id" type="StringLength1to128">
+      <xsd:annotation>
+        <xsd:documentation>Enterprise Service Bus Identifier. Save this value for tracking purpose.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:complexType name="ErrorType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Returning an empty element of this type indicates the successful processing of an OpenTravel message. This is used in conjunction with the Warning Type to report any warnings or business errors.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:attribute name="Language" type="xsd:language" use="optional">
+      <xsd:annotation>
+        <xsd:documentation xml:lang="en">Language identification.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Type" type="CodeType" use="required">
+      <xsd:annotation>
+        <xsd:documentation xml:lang="en">The Error element MUST contain the Type attribute that uses a recommended set                                         of values to indicate the error type. The validating XSD can expect to accept                                         values that it has NOT been explicitly coded for and process them by using Type                                         ="Unknown".</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="ShortText" type="StringLength1to64" use="optional">
+      <xsd:annotation>
+        <xsd:documentation xml:lang="en">An abbreviated version of the error in textual format.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Code" type="CodeType" use="optional">
+      <xsd:annotation>
+        <xsd:documentation xml:lang="en">If present, this refers to a table of coded values exchanged between applications to identify errors or warnings.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="DocURL" type="xsd:anyURI" use="optional">
+      <xsd:annotation>
+        <xsd:documentation xml:lang="en">If present, this URL refers to an online description of the error that occurred.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Status" type="StringLength1to64" use="optional">
+      <xsd:annotation>
+        <xsd:documentation xml:lang="en">If present, recommended values are those enumerated in the ErrorStatusEnum, (NotProcessed | Incomplete | Complete | Unknown) however, the data type is designated as string data, recognizing that trading partners may identify additional status conditions not included in the enumeration.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Tag" type="StringLength1to1000" use="optional">
+      <xsd:annotation>
+        <xsd:documentation xml:lang="en">If present, this attribute may identify an unknown or misspelled tag that caused an error in processing. It is recommended that the Tag attribute use XPath notation to identify the location of a tag in the event that more than one tag of the same name is present in the document. Alternatively, the tag name alone can be used to identify missing data [Type=ReqFieldMissing].</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="RecordID" type="StringLength1to64" use="optional">
+      <xsd:annotation>
+        <xsd:documentation xml:lang="en">If present, this attribute allows for batch processing and the identification of the record that failed amongst a group of records. This value may contain a concatenation of a unique failed transaction ID with specific record(s) associated with that transaction.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="NodeList" type="StringLength1to1000" use="optional">
+      <xsd:annotation>
+        <xsd:documentation xml:lang="en">An XPath expression that selects all the nodes whose data caused this error.
+                                         Further, this expression should have an additional contraint which contains the
+                                         data of the node. This will provide the offending data back to systems that
+                                         cannot maintain the original message.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:simpleType name="CodeType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Used for codes in the ESB code tables. Possible values of this pattern are 1, 101, 101.EQP, or 101.EQP.X.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[0-9A-Z]{1,3}(\.[A-Z]{3}(\.X){0,1}){0,1}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="StringLength1to32">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Used for Character Strings, length 1 to 64.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="32" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="StringLength1to64">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Used for Character Strings, length 1 to 64.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="64" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="StringLength1to128">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Used for Character Strings, length 1 to 64.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="128" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="StringLength1to1000">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Used for Character Strings, length 1 to 64.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="1000" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:annotation>
+    <xsd:documentation>Common types along all Javer Enterprise Service Bus services.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType name="IdentifierList">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="Identifier">
+        <xsd:complexType>
+          <xsd:attribute default="GENERIC" name="Type" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Identifier type.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:attribute>
+          <xsd:attribute name="Name" type="xsd:string" use="optional">
+            <xsd:annotation>
+              <xsd:documentation>A common name for the Identifier.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:attribute>
+          <xsd:attribute name="Value" type="xsd:string" use="required">
+            <xsd:annotation>
+              <xsd:documentation>The value of the Identifier.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:attribute>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute default="GENERIC" name="ListType" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>List type.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Quantity" type="xsd:int" use="optional">
+      <xsd:annotation>
+        <xsd:documentation>Optional, quantity of Items.</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:complexType name="TramiteType">
+    <xsd:sequence>
+      <xsd:element name="Lines">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="Line">
+              <xsd:complexType>
+                <xsd:attribute name="NUMERO_FACT" type="xsd:string" />
+                <xsd:attribute name="CONCEPTO" type="xsd:string" />
+                <xsd:attribute name="DETALLE" type="xsd:string" />
+                <xsd:attribute name="FRENTE" type="xsd:string" />
+                <xsd:attribute name="SUBETAPA" type="xsd:string" />
+                <xsd:attribute name="IMPORTE" type="xsd:decimal" />
+                <xsd:attribute name="CREADO_POR" type="xsd:string" />
+                <xsd:attribute name="FECHA_CREACION" type="xsd:dateTime" />
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="TRAMITE_ID" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>Identificador del Tramite</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="EMPRESA" type="xsd:string" />
+    <xsd:attribute name="FRACCIONAMIENTO" type="xsd:string" />
+    <xsd:attribute name="MUNICIPIO" type="xsd:string" />
+    <xsd:attribute name="BENEFICIARIO" type="xsd:string" />
+    <xsd:attribute name="CONCEPTO" type="xsd:decimal" />
+    <xsd:attribute name="SOLICITANTE" type="xsd:string" />
+    <xsd:attribute name="APROBADOR" type="xsd:string" />
+    <xsd:attribute name="APROBADOR_EMAIL" type="xsd:string" />
+    <xsd:attribute name="TIENE_FACTURA" type="xsd:string" />
+    <xsd:attribute name="TIENE_IVA" type="xsd:string" />
+    <xsd:attribute name="SUBTOTAL" type="xsd:decimal" />
+    <xsd:attribute name="IVA" type="xsd:decimal" />
+    <xsd:attribute name="RETENSION_IVA" type="xsd:decimal" />
+    <xsd:attribute name="RETENSION_ISR" type="xsd:decimal" />
+    <xsd:attribute name="RETENSIONES" type="xsd:decimal" />
+    <xsd:attribute name="IMPORTE" type="xsd:decimal" />
+    <xsd:attribute name="TOTAL" type="xsd:decimal" />
+    <xsd:attribute name="NETO" type="xsd:decimal" />
+    <xsd:attribute name="CODIGO" type="xsd:string" />
+    <xsd:attribute name="NIVEL_EDICION" type="xsd:string" />
+    <xsd:attribute name="UEN_ID" type="xsd:string" />
+  </xsd:complexType>
+  <xsd:complexType name="TransferenciaType">
+    <xsd:sequence>
+      <xsd:element name="Lines">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="Line" type="TramiteType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="TRANSFERENCIA_ID" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>Identificador de la Transferencia en el módulo de Tramites</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="UEN" type="xsd:string" />
+    <xsd:attribute name="BANCO" type="xsd:string" />
+    <xsd:attribute name="SUCURSAL" type="xsd:string" />
+    <xsd:attribute name="CUENTA" type="xsd:string" />
+    <xsd:attribute name="SUBCUENTA" type="xsd:decimal" />
+    <xsd:attribute name="IVA" type="xsd:decimal" />
+    <xsd:attribute name="RETENSIONES" type="xsd:decimal" />
+    <xsd:attribute name="TOTAL" type="xsd:decimal" />
+    <xsd:attribute name="APROBADOR" type="xsd:string" />
+    <xsd:attribute name="APROBADOR_EMAIL" type="xsd:string" />
+    <xsd:attribute name="NIVEL_EDICION" type="xsd:string" />
+    <xsd:attribute name="UEN_ID" type="xsd:string" />
+  </xsd:complexType>
+  <xsd:complexType name="CredentialType">
+    <xsd:attribute default="ACTIVE_DIRECTORY" name="Type" type="StringLength1to32" />
+    <xsd:attribute name="Username" type="StringLength1to32" />
+    <xsd:attribute name="Password" type="StringLength1to64" />
+  </xsd:complexType>
+  <xsd:complexType name="FraccionamientoType">
+    <xsd:sequence>
+      <xsd:element name="Frentes" type="FrenteListType" />
+    </xsd:sequence>
+    <xsd:attribute name="ID" type="xsd:long">
+      <xsd:annotation>
+        <xsd:documentation>Fraccionamiento identifier on Database system</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Name" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>Fraccionamiento's name</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Code" type="CodeType">
+      <xsd:annotation>
+        <xsd:documentation>Fraccionamiento's Code</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Estatus" type="CodeType">
+      <xsd:annotation>
+        <xsd:documentation>Fraccionamiento estatus, 1= Active, 0=Inactive</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:complexType name="FraccionamientoListType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Fraccionamiento" type="FraccionamientoType" />
+    </xsd:sequence>
+    <xsd:attribute name="ItemQuantity" type="xsd:int" />
+  </xsd:complexType>
+  <xsd:complexType name="FrenteType">
+    <xsd:sequence>
+      <xsd:element name="Conjuntos" type="ConjuntoListType" />
+      <xsd:element name="Fideicomiso" type="FideicomisoType" />
+    </xsd:sequence>
+    <xsd:attribute name="ID" type="xsd:long">
+      <xsd:annotation>
+        <xsd:documentation>Frentes's identifier on Database system</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Name" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>Frente's name</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Code" type="CodeType">
+      <xsd:annotation>
+        <xsd:documentation>Frente's code</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Estatus" type="CodeType">
+      <xsd:annotation>
+        <xsd:documentation>Estatus of this Frente, 1=Active, 0=Inactive</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="FideicomisoFlag" type="xsd:boolean">
+      <xsd:annotation>
+        <xsd:documentation>This attribute indicates whether the Frente is marked with Fideicomiso</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="IsNewFlag" type="CodeType">
+      <xsd:annotation>
+        <xsd:documentation>This attribute indicates whether this is a new Frente object in the system</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:complexType name="FrenteListType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Frente" type="FrenteType" />
+    </xsd:sequence>
+    <xsd:attribute name="ItemQuantity" type="xsd:int" />
+  </xsd:complexType>
+  <xsd:complexType name="FideicomisoType">
+    <xsd:attribute name="Description" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>Fideicomiso's name or description to recognize it</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Estatus" type="CodeType">
+      <xsd:annotation>
+        <xsd:documentation>Estatus of this Fideicomiso objetc</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:complexType name="ConjuntoType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="HomeList" type="HomeListType" />
+    </xsd:sequence>
+    <xsd:attribute name="ID" type="xsd:long">
+      <xsd:annotation>
+        <xsd:documentation>Conjunto's identifier on Database system</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Name" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>Conjuntos's name</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="HomeQuantity" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>Number of Homes (Viviendas) assigned to this Conjunto</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="HomePendingQuantity" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>Number of  pending Homes (Viviendas) to be registered to this Conjunto</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="HomeRegisteredQuantity" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>Number of  registered Homes (Viviendas) to this Conjunto</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Estatus" type="CodeType">
+      <xsd:annotation>
+        <xsd:documentation>Estatus in the system of this Conjunto object, 1=Active, 0=Inactive</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Prototipo" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>Prototipo's name or description of this Conjunto</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="IsNewFlag" type="CodeType">
+      <xsd:annotation>
+        <xsd:documentation>This attribute indicates whether this is a new Conjunto object in the system</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:complexType name="ConjuntoListType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Conjunto" type="ConjuntoType" />
+    </xsd:sequence>
+    <xsd:attribute name="ItemQuantity" type="xsd:int" />
+  </xsd:complexType>
+  <xsd:complexType name="HomeType">
+    <xsd:annotation>
+      <xsd:documentation>This element represents a Vivienda object in the system.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:attribute name="Piso" type="xsd:string" />
+    <xsd:attribute name="Manzana" type="xsd:string" />
+    <xsd:attribute name="NumeroLote" type="xsd:string" />
+    <xsd:attribute name="NumeroInterior" type="xsd:string" />
+    <xsd:attribute name="UnidadPrivativa" type="xsd:string" />
+    <xsd:attribute name="Direccion" type="xsd:string" />
+    <xsd:attribute name="NumeroOficial" type="xsd:string" />
+    <xsd:attribute name="M2Superficie" type="xsd:string" />
+    <xsd:attribute name="M2Construccion" type="xsd:string" />
+    <xsd:attribute name="M2SuperficieExcedente" type="xsd:string" />
+    <xsd:attribute name="SuperfloteTipo" type="xsd:string" />
+    <xsd:attribute name="AvanceObraFisico" type="xsd:string" />
+    <xsd:attribute name="AvanceObraFinanciero" type="xsd:string" />
+    <xsd:attribute name="AnioPrograma" type="xsd:string" />
+    <xsd:attribute name="PaqueteInfonavit" type="xsd:string" />
+    <xsd:attribute name="CveUnicaVivienda" type="xsd:string" />
+    <xsd:attribute name="RUV" type="xsd:string" />
+    <xsd:attribute name="Cablevision" type="xsd:string" />
+    <xsd:attribute name="NuevaManzana" type="xsd:string" />
+    <xsd:attribute name="NuevoLote" type="xsd:string" />
+    <xsd:attribute name="NuevoNumeroInt" type="xsd:string" />
+    <xsd:attribute name="Esquina" type="xsd:string" />
+    <xsd:attribute name="LadoSol" type="xsd:string" />
+    <xsd:attribute name="LadoSombra" type="xsd:string" />
+    <xsd:attribute name="MotivoBaja" type="xsd:string" />
+    <xsd:attribute name="RazonCambio" type="xsd:string" />
+    <xsd:attribute name="NumeroInterno" type="xsd:string" />
+    <xsd:attribute name="FormalizacionContado" type="xsd:string" />
+    <xsd:attribute name="NuevaUnidadPrivativa" type="xsd:string" />
+    <xsd:attribute name="FlagUnidadPrivativa" type="xsd:string" />
+    <xsd:attribute name="FlagDTU" type="xsd:string" />
+    <xsd:attribute name="FlagDTI" type="xsd:string" />
+    <xsd:attribute name="FlagMuestra" type="xsd:string" />
+    <xsd:attribute name="FlagDisponible" type="xsd:string" />
+    <xsd:attribute name="FlagFrenteParque" type="xsd:string" />
+    <xsd:attribute name="FlagSobreAvenida" type="xsd:string" />
+    <xsd:attribute name="FlagNuevaUnidadPrivativa" type="xsd:string" />
+    <xsd:attribute name="FlagGravamen" type="xsd:string" />
+    <xsd:attribute name="FlagViviendaVerde" type="xsd:string" />
+    <xsd:attribute name="FechaAvance" type="xsd:string" />
+    <xsd:attribute name="FechaAvaluo" type="xsd:string" />
+    <xsd:attribute name="FechaVigenciaPredial" type="xsd:string" />
+    <xsd:attribute name="FechaDTU" type="xsd:string" />
+    <xsd:attribute name="FechaDTI" type="xsd:string" />
+    <xsd:attribute name="FechaLiberacionGravamen" type="xsd:string" />
+    <xsd:attribute name="Prototipo" type="xsd:string" />
+  </xsd:complexType>
+  <xsd:complexType name="HomeListType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Home" type="HomeType" />
+    </xsd:sequence>
+    <xsd:attribute name="ItemQuantity" type="xsd:int" />
+  </xsd:complexType>
+  <xsd:complexType name="PrototipoType">
+    <xsd:attribute name="ID" type="xsd:long">
+      <xsd:annotation>
+        <xsd:documentation>Identifier of this Prototipo on Database system</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Name" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>Prototipo's name</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Estatus" type="CodeType">
+      <xsd:annotation>
+        <xsd:documentation>Estatus of this object in the system, 1=Active, 0=Inactive</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:complexType name="PrototipoListType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Prototipo" type="PrototipoType" />
+    </xsd:sequence>
+    <xsd:attribute name="ItemQuantity" type="xsd:int" />
+  </xsd:complexType>
+  <xsd:complexType name="EmployeeType">
+    <xsd:attribute name="ID" type="xsd:string" />
+    <xsd:attribute name="EmpNumber" type="xsd:string" />
+  </xsd:complexType>
+  <xsd:complexType name="ParameterListType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Parameter" type="ParameterType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ParameterType">
+    <xsd:sequence maxOccurs="1">
+      <xsd:element name="Name" type="xsd:string" />
+      <xsd:element name="Value" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ProspectListType">
+    <xsd:sequence minOccurs="1">
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Prospect" type="ProspectType" />
+    </xsd:sequence>
+    <xsd:attribute name="ItemQuantity" type="xsd:int" />
+  </xsd:complexType>
+  <xsd:complexType name="ProspectType">
+    <xsd:sequence>
+      <xsd:element name="Fraccionamiento" type="FraccionamientoType" />
+    </xsd:sequence>
+    <xsd:attribute name="FirstName" type="xsd:string" />
+    <xsd:attribute name="LastName" type="xsd:string" />
+    <xsd:attribute name="SecondSurname" type="xsd:string" />
+    <xsd:attribute name="FullName" type="xsd:string" />
+    <xsd:attribute name="HomePhone" type="xsd:string" />
+    <xsd:attribute name="WorkPhone" type="xsd:string" />
+    <xsd:attribute name="MobilePhone" type="xsd:string" />
+    <xsd:attribute name="Birthdate" type="xsd:date" />
+    <xsd:attribute name="Status" type="xsd:string" />
+    <xsd:attribute name="Kin" type="xsd:string" />
+  </xsd:complexType>
+</xsd:schema>

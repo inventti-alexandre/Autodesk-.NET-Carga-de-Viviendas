@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://esb.javer.com/ManageHome" xmlns:types="http://esb.javer.com/ManageHome/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://esb.javer.com/ManageHome" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <documentation>
+    <abstractWSDL>http://192.168.44.244:10711/soa-infra/services/default/ManageHome!1.0/apps/SOA/WSDLs/ManageHome.wsdl</abstractWSDL>
+  </documentation>
+  <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="ManageHomeBinding1.2_WSAT_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsat:ATAssertion wsp:Optional="true" xmlns:wsat="http://schemas.xmlsoap.org/ws/2004/10/wsat" />
+      </wsp:All>
+      <wsp:All>
+        <wsat11:ATAssertion wsp:Optional="true" xmlns:wsat11="http://docs.oasis-open.org/ws-tx/wsat/2006/06" />
+      </wsp:All>
+      <wsp:All>
+        <wsat12:ATAssertion wsp:Optional="true" xmlns:wsat12="http://docs.oasis-open.org/ws-tx/wsat/2006/06" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://esb.javer.com/ManageHome/types">
+      <xsd:include schemaLocation="http://192.168.44.244:10711/soa-infra/services/default/ManageHome/soap?XSD=../Schemas/ManageHome.xsd" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="BulkUploadRq">
+    <wsdl:part name="BulkUploadRq" element="types:BulkUploadRq" />
+  </wsdl:message>
+  <wsdl:message name="BulkUploadRs">
+    <wsdl:part name="BulkUploadRs" element="types:BulkUploadRs" />
+  </wsdl:message>
+  <wsdl:portType name="ManageHomePortType">
+    <wsdl:operation name="BulkUpload">
+      <wsdl:input message="tns:BulkUploadRq" />
+      <wsdl:output message="tns:BulkUploadRs" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ManageHomeBinding1.2" type="tns:ManageHomePortType">
+    <soap12:binding transport="http://www.w3.org/2003/05/soap/bindings/HTTP/" />
+    <wsdl:operation name="BulkUpload">
+      <soap12:operation soapAction="BulkUpload" style="document" />
+      <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ManageHomeBinding1.2_WSAT_policy" wsdl:required="false" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="soap">
+    <wsdl:port name="ManageHomePort" binding="tns:ManageHomeBinding1.2">
+      <soap12:address location="http://192.168.44.244:10711/soa-infra/services/default/ManageHome/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://esb.javer.com/CatFraccionamientos" xmlns:types="http://esb.javer.com/CatFraccionamientos/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://esb.javer.com/CatFraccionamientos" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <documentation>
+        <abstractWSDL>http://192.168.44.244:10711/soa-infra/services/catalog/CatFraccionamientos!2.0/apps/SOA/WSDLs/catalog/CatFraccionamientos.wsdl</abstractWSDL>
+    </documentation>
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://esb.javer.com/CatFraccionamientos/types">
+      <xsd:include schemaLocation="http://192.168.44.244:10711/soa-infra/services/catalog/CatFraccionamientos/soap?XSD=../../Schemas/catalog/CatFraccionamientos.xsd" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetFraccionamientosRq">
+    <wsdl:part name="GetFraccionamientosRq" element="types:GetFraccionamientosRq" />
+  </wsdl:message>
+  <wsdl:message name="GetFraccionamientosRs">
+    <wsdl:part name="GetFraccionamientosRs" element="types:GetFraccionamientosRs" />
+  </wsdl:message>
+  <wsdl:portType name="CatFraccionamientosPortType">
+    <wsdl:operation name="GetFraccionamientosByUserAndRight">
+      <wsdl:input message="tns:GetFraccionamientosRq" />
+      <wsdl:output message="tns:GetFraccionamientosRs" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFraccionamientos">
+      <wsdl:input message="tns:GetFraccionamientosRq" />
+      <wsdl:output message="tns:GetFraccionamientosRs" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CatFraccionamientosBinding1.2" type="tns:CatFraccionamientosPortType">
+    <soap12:binding transport="http://www.w3.org/2003/05/soap/bindings/HTTP/" />
+    <wsdl:operation name="GetFraccionamientosByUserAndRight">
+      <soap12:operation soapAction="GetFraccionamientosByUserAndRight" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFraccionamientos">
+      <soap12:operation soapAction="GetFraccionamientos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="soap">
+    <wsdl:port name="CatFraccionamientosPort" binding="tns:CatFraccionamientosBinding1.2">
+      <soap12:address location="http://192.168.44.244:10711/soa-infra/services/catalog/CatFraccionamientos/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

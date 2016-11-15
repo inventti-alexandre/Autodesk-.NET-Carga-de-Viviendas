@@ -1,0 +1,101 @@
+﻿<html>
+  <head>
+    <title>Schemas/catalog Composite Not Found</title>
+    <style type="text/css" media="screen">A:link { font-family: Arial, Helvetica, sans-serif; color:#663300; background-color : #FFFFFF;}
+A:active { font-family: Arial, Helvetica, sans-serif; color:#ff6600; background-color : #FFFFFF;}
+A:visited { font-family: Arial, Helvetica, sans-serif; color:#996633; background-color : #FFFFFF;}
+A.navigation:link{font-family: Arial, Helvetica, sans-serif;font-size:65%;color:#996633;background-color : #FFFFFF;}
+A.navigation:active{ font-family: Arial, Helvetica, sans-serif; font-size:65%; color:#996633; background-color : #FFFFFF;}
+A.navigation:visited{ font-family: Arial, Helvetica, sans-serif; font-size:65%; color:#996633; background-color : #FFFFFF;}
+BODY, P, LI, UL, OL { font-family: Arial, Helvetica, sans-serif; font-size:12px; color:#000000; background-color : #FFFFFF;}
+H1 { font-family: Arial, Helvetica, sans-serif; font-size:150%; color:#336699; background-color : #FFFFFF; border : solid #CCCC99; border-width : 0px 0px 2px 0px; width : 100%;}
+H2 {font-family: Arial, Helvetica, sans-serif; font-size:120%; color:#336699; background-color : #FFFFFF; border : solid #cccc99; border-width : 0px 0px 2px 0px; width : 100%;}
+H3 {font-family: Arial, Helvetica, sans-serif;font-size:110%;color:#336699;background-color : #FFFFFF;width : 100%;}
+H4 {font-family: Arial, Helvetica, sans-serif;font-size:10pt;color:#000000;background-color : #FFFFFF;font-weight: bold;width : 100%;}
+P.indent {text-indent: 9%;}
+
+.testpage-message-body-editor { margin: 10 0 10px 10px; font-size: 12px; }
+
+.testpage-complex-editor { margin: 10 0 0 10px; font-size: 12px;}
+
+.testpage-complex-editor-body { margin: 10 0 0 10px; }
+
+.testpage-complex-editor-part {	margin: 10 10 0 10px; }
+
+.testpage-header-editor { margin: 10 0 30 10px; font-size: 12px; }
+
+.testpage-header-editor-part { margin: 0 0 10 0px; font-size: 12px; }
+
+.testpage-simpletype-type-tag  { color: rgb(128, 0, 128); padding: 0px;	font-size: 12px; margin: 0 2 0 10px; }
+
+.testpage-simpletype-tag {color: blue; font-size: 12px; margin: 0 6 0 2px; text-align:right; }
+
+.testpage-complextype-tag  {color: black; font-size: 12px; font-weight: bold;}
+
+.testpage-input {font-size: 12px; text-align:left; }
+
+.testpage-input-box {border: 1px solid dimgray; font-size: 12px; text-align:left;}
+
+.testpage-dropdown { font-size: 12px;}
+
+.testpage-dropdown-box {font-size: 12px;}
+
+.testpage-arraytype-tag {color: black; font-size: 12px; font-weight: bold;}
+
+.testpage-array-element-tag { margin: 0 0 0 10px; }
+
+.testpage-array-element { margin : 10px; background-color: #FFFFFF; background-image: url("med_sub_BG.gif"); }
+
+.testpage-arraytype-adder { font-size: 12px; }
+
+.testpage-checkbox { height: 12px; width: 12px; margin: 2 2 3 0px; }
+
+table {border-spacing: 0;}
+
+td {padding: 1px 4px 1px 4px; width: 130px; }
+
+.testpage-invocation-textarea { margin: 10px 0 0 10px; font-size: 12px; border-top: solid #95b7cd 1px;
+     border-left: solid #95b7cd 1px; border-bottom: solid #95b7cd 1px; border-right: solid #95b7cd 1px; }
+
+.testpage-invocation-button { margin: 10px 0 10px 150px; font-size: 12px;}
+
+.testpage-array-remove { background-image: url(delete.gif);  background-repeat: no-repeat; clear: both; display: inline-block; }
+
+.testpage-array-add { background-image: url(add.gif);  background-repeat: no-repeat; clear: both; display: block; position: relative; left: 1px}
+
+.xmlViewer {font-family: monospace; height: 300px; width: 95%; overflow: auto; position: relative; left:0px;}
+
+.xmlViewer2 {font-family: monospace; height: 85%; width: 95%; overflow: auto; position: relative; left:0px;}
+
+.xmlTag {color: #336699; background-color: transparent; font-weight: bold;}
+
+.xmlAttName {color: #990000; background-color: transparent}
+
+.xmlAttEqual {color: #006699; background-color: transparent}
+
+.xmlAttValue {color: #0033cc; background-color: transparent}
+
+.mode-select { margin: 0 0 0 10px;}
+
+.extras { margin: 10px 0 0 0px; font-size: 12px; }
+
+.expander-open {background-image: url(disclosure_expanded.png); background-repeat: no-repeat; background-position: center; display:inline-block;}
+
+.expander-closed { background-image: url(disclosure_collapsed.png); background-repeat: no-repeat; background-position: center; display:inline-block;}
+
+div.bar {width:85%; padding-left:15px; border-color: rgb(128,128,128);border-width: 0px 0px 1px 0px ; border-style:solid; line-height: 0}
+
+div.container {position:relative; border-width:1px; border:solid #95b7cd 2px; margin-top:20px;padding-top:20px}
+
+div.operation {position:absolute; top:-12px; left:40px; background-color:white}
+
+a .alt { visibility: hidden; position: relative; left: -4px; }
+</style>
+  </head>
+  <body>
+    <h2>Failed to Load a composite for composite identified by Schemas/catalog </h2>
+    <p>
+      <i>Please verify that the composite has been properly deployed.</i>
+    </p>
+  </body>
+</html>
