@@ -297,7 +297,7 @@ namespace PluginInsViviendas_UNO.Vista
                             MessageBox.Show("El Frente no cuenta con Fideicomiso", "Información del Frente", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
 
-                            if(SiMultifamiliar.Checked == false)
+                            if(!SiMultifamiliar.Checked)
                             { 
                                 Unifamiliar.USelDatosPlano sdp = new Unifamiliar.USelDatosPlano();
                                 //P3_CompDatos.V.BtViviendasError sdp = new P3_CompDatos.V.BtViviendasError();
@@ -316,12 +316,22 @@ namespace PluginInsViviendas_UNO.Vista
                         }
                         else
                         {
-                            Unifamiliar.USelDatosPlano sdp = new Unifamiliar.USelDatosPlano();
-                            //P3_CompDatos.V.BtViviendasError sdp = new P3_CompDatos.V.BtViviendasError();
+                            if (!SiMultifamiliar.Checked)
+                            {
+                                Unifamiliar.USelDatosPlano sdp = new Unifamiliar.USelDatosPlano();
+                                //P3_CompDatos.V.BtViviendasError sdp = new P3_CompDatos.V.BtViviendasError();
 
-                            sdp.Show();
-                            Modelo.EncDatosConfiguracion.CierreAuto = true;
-                            this.Close();
+                                sdp.Show();
+                                Modelo.EncDatosConfiguracion.CierreAuto = true;
+                                this.Close();
+                            }
+                            else
+                            {
+                                Multifamiliar.MSelPrototipos msp = new Multifamiliar.MSelPrototipos();
+                                msp.Show();
+                                Modelo.EncDatosConfiguracion.CierreAuto = true;
+                                this.Close();
+                            }
                         }
                     }
                     else
