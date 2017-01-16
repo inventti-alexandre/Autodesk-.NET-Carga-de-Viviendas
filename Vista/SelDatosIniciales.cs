@@ -319,8 +319,6 @@ namespace PluginInsViviendas_UNO.Vista
                             if (!SiMultifamiliar.Checked)
                             {
                                 Unifamiliar.USelDatosPlano sdp = new Unifamiliar.USelDatosPlano();
-                                //P3_CompDatos.V.BtViviendasError sdp = new P3_CompDatos.V.BtViviendasError();
-
                                 sdp.Show();
                                 Modelo.EncDatosConfiguracion.CierreAuto = true;
                                 this.Close();

@@ -51,3 +51,4 @@ C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\Plu
 C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Release\PluginInsViviendas_UNO.Vista.Multifamiliar.MSPAtras.resources
 C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Release\PluginInsViviendas_UNO.Vista.SelDatosIniciales.resources
 C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Release\PluginInsViviendas_UNO.Vista.Vista.CargandoViviendas.resources
+C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Release\PluginInsVivienda.csprojResolveAssemblyReference.cache
