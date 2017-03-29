@@ -364,9 +364,15 @@ namespace PluginInsViviendas_UNO.Controlador
             //Conjunto y Prototipo
             bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].Name =
                                                                              Modelo.EncDatosIniciales.Conjunto;
-
+            
+            
             if (tipoCarga == "Unifamiliar")
             {
+                //Asigno prototipo a Nivel Conjunto (Cambio realizado el 14 de Marzo del 2017)
+                //No llegaba a SOA carga de Prototipo a Nivel conjunto Unifamiliar
+                bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0]
+                    .Prototipo = Modelo.EncDatosIniciales.Prototipo;
+
                 for (int row = 0; row < Modelo.EncDatosPlano.VivsSeleccionPlano.GetLength(0); row++)
                 {
                     PorcentajeAvance += PeriodoPorcentaje;
@@ -376,10 +382,9 @@ namespace PluginInsViviendas_UNO.Controlador
                     //Inicializo la vivienda a asignar
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
                                                                                                                 = new soaBulk.HomeType();
-
                     //Asigno prototipo
-                    bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .Prototipo = Modelo.EncDatosIniciales.Prototipo;
+                    //bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                    //    .Prototipo = Modelo.EncDatosIniciales.Prototipo;
 
                     //Asigno manzana
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
@@ -619,7 +624,7 @@ namespace PluginInsViviendas_UNO.Controlador
             foreach(string LoteActual in DistintosLotes)
             {
                 int     RenglonesLote = 0;
-                float   SumaM2Superficie = 0,
+                decimal SumaM2Superficie = 0,
                         SumaSuperficieLoteTipo = 0,
                         SumaExcedente = 0;
 
@@ -631,18 +636,18 @@ namespace PluginInsViviendas_UNO.Controlador
                     {
                         RenglonesaMarcar.Add(dtrow.Index);
                         RenglonesLote += 1;
-                        SumaM2Superficie += float.Parse(dtrow.Cells[Modelo.IndexColumn.MDFColumnaM2Sup].Value.ToString());
-                        SumaExcedente += float.Parse(dtrow.Cells[Modelo.IndexColumn.MDFColumnaM2Excedente].Value.ToString());
-                        SumaSuperficieLoteTipo += float.Parse(dtrow.Cells[Modelo.IndexColumn.MDFColumnaSuperfloteTipo].Value.ToString());
+                        SumaM2Superficie += decimal.Parse(dtrow.Cells[Modelo.IndexColumn.MDFColumnaM2Sup].Value.ToString());
+                        SumaExcedente += decimal.Parse(dtrow.Cells[Modelo.IndexColumn.MDFColumnaM2Excedente].Value.ToString());
+                        SumaSuperficieLoteTipo += decimal.Parse(dtrow.Cells[Modelo.IndexColumn.MDFColumnaSuperfloteTipo].Value.ToString());
                     }
                 }
 
-                double excedenteRedondeo =((SumaM2Superficie - SumaSuperficieLoteTipo) / RenglonesLote);
+                decimal excedenteRedondeo =((SumaM2Superficie - SumaSuperficieLoteTipo) / RenglonesLote);
 
                 string excedenteCorrecto = string.Format(MetodosPlano.EnviaFormatoArea(Modelo.EncDatosPlano.Decimales.ToString()),
                                                             excedenteRedondeo);
 
-                if(SumaExcedente != float.Parse(excedenteCorrecto))
+                if(SumaExcedente != decimal.Parse(excedenteCorrecto))
                 {
                     SiSumaCorrecta = false;
                     
