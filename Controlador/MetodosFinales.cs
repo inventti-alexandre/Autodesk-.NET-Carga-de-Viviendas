@@ -370,8 +370,8 @@ namespace PluginInsViviendas_UNO.Controlador
             {
                 //Asigno prototipo a Nivel Conjunto (Cambio realizado el 14 de Marzo del 2017)
                 //No llegaba a SOA carga de Prototipo a Nivel conjunto Unifamiliar
-                bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0]
-                    .Prototipo = Modelo.EncDatosIniciales.Prototipo;
+                //bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0]
+                //    .Prototipo = Modelo.EncDatosIniciales.Prototipo;
 
                 for (int row = 0; row < Modelo.EncDatosPlano.VivsSeleccionPlano.GetLength(0); row++)
                 {
@@ -383,8 +383,8 @@ namespace PluginInsViviendas_UNO.Controlador
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
                                                                                                                 = new soaBulk.HomeType();
                     //Asigno prototipo
-                    //bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                    //    .Prototipo = Modelo.EncDatosIniciales.Prototipo;
+                    bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                        .Prototipo = Modelo.EncDatosIniciales.Prototipo;
 
                     //Asigno manzana
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
