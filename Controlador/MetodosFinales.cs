@@ -445,6 +445,10 @@ namespace PluginInsViviendas_UNO.Controlador
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
                         .M2SuperficieExcedente = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaM2Excedente];
 
+                    //Enviar M2 Construcción a viviendas unifamiliares 16/05/2017
+                    bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                        .M2Construccion = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaM2Construccion];
+
                     //Vivienda Verde
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
                         .FlagViviendaVerde = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaBnVivVerde];
