@@ -123,3 +123,147 @@ C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\Plu
 C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.pdb
 C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.dll
 C:\Users\mnieto\Documents\Visual Studio 2015\Projects\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.pdb
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\preloader.gif
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\LoadingCircle.gif
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\cargando.gif
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\manzana.png
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\ask.png
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\change.png
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\casasjaver.png
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\Home.png
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.dll.config
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.pdb
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\accoremgd.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\acdbmgd.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\acmgd.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AdUiPalettes.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcDx.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcDxPublishUi.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AdWindows.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcMr.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcWindows.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcTcMgd.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcCui.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Autodesk.AutoCAD.Interop.Common.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcMNUParser.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\acdbmgd.resources.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\AcDx.resources.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\AcDxPublishUi.resources.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\AdWindows.resources.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\AcMr.resources.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\AcWindows.resources.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Properties.Resources.resources
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MBtViviendasError.resources
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MDatosFinales.resources
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MPntOrdenaViviendas.resources
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MSeleccionaPlano.resources
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MSelPrototipos.resources
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MBtRelPrototipo.resources
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MSPAtras.resources
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.SelDatosIniciales.resources
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.BitacoraErrores.resources
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.USelDatosPlano.resources
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.UBtViviendasError.resources
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Vista.CargandoViviendas.resources
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.UDatosFinales.resources
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsVivienda.csproj.GenerateResource.Cache
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.dll
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.pdb
+C:\Users\azama\Desktop\javer autodesk\Proyectos Autodesk\Carga Viviendas\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsVivienda.csprojResolveAssemblyReference.cache
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\preloader.gif
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\LoadingCircle.gif
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\cargando.gif
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\manzana.png
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\ask.png
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\change.png
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\casasjaver.png
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\Home.png
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.dll.config
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.pdb
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\accoremgd.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\acdbmgd.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\acmgd.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AdUiPalettes.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcDx.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcDxPublishUi.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AdWindows.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcMr.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcWindows.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcTcMgd.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcCui.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Autodesk.AutoCAD.Interop.Common.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcMNUParser.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\acdbmgd.resources.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\AcDx.resources.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\AcDxPublishUi.resources.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\AdWindows.resources.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\AcMr.resources.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\AcWindows.resources.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsVivienda.csprojResolveAssemblyReference.cache
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Properties.Resources.resources
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MBtViviendasError.resources
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MDatosFinales.resources
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MPntOrdenaViviendas.resources
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MSeleccionaPlano.resources
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MSelPrototipos.resources
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MBtRelPrototipo.resources
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MSPAtras.resources
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.SelDatosIniciales.resources
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.BitacoraErrores.resources
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.USelDatosPlano.resources
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.UBtViviendasError.resources
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Vista.CargandoViviendas.resources
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.UDatosFinales.resources
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsVivienda.csproj.GenerateResource.Cache
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.dll
+C:\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.pdb
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\preloader.gif
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\LoadingCircle.gif
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\cargando.gif
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\manzana.png
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\ask.png
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\change.png
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\casasjaver.png
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Resources\Home.png
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.dll.config
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\PluginInsViviendas_UNO.pdb
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\accoremgd.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\acdbmgd.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\acmgd.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AdUiPalettes.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcDx.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcDxPublishUi.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AdWindows.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcMr.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcWindows.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcTcMgd.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcCui.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\Autodesk.AutoCAD.Interop.Common.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\AcMNUParser.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\acdbmgd.resources.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\AcDx.resources.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\AcDxPublishUi.resources.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\AdWindows.resources.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\AcMr.resources.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\bin\Debug\en-US\AcWindows.resources.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsVivienda.csprojResolveAssemblyReference.cache
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Properties.Resources.resources
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MBtViviendasError.resources
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MDatosFinales.resources
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MPntOrdenaViviendas.resources
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MSeleccionaPlano.resources
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MSelPrototipos.resources
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MBtRelPrototipo.resources
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Multifamiliar.MSPAtras.resources
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.SelDatosIniciales.resources
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.BitacoraErrores.resources
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.USelDatosPlano.resources
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.UBtViviendasError.resources
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Vista.CargandoViviendas.resources
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.Vista.Unifamiliar.UDatosFinales.resources
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsVivienda.csproj.GenerateResource.Cache
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.dll
+C:\Projects\JAVER\PluginInsViviendas_UNO\PluginInsViviendas_UNO\obj\Debug\PluginInsViviendas_UNO.pdb

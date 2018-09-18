@@ -52,6 +52,10 @@
             this.lblResUser = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.SiMultifamiliar = new System.Windows.Forms.CheckBox();
+            this.cmbAmbiente = new System.Windows.Forms.ComboBox();
+            this.btnFirmarAmbiente = new System.Windows.Forms.Button();
+            this.txtAmbientePassword = new System.Windows.Forms.TextBox();
+            this.btnAmbienteLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnSiguiente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
@@ -324,6 +328,64 @@
             this.SiMultifamiliar.UseVisualStyleBackColor = false;
             this.SiMultifamiliar.CheckedChanged += new System.EventHandler(this.SiMultifamiliar_CheckedChanged);
             // 
+            // cmbAmbiente
+            // 
+            this.cmbAmbiente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAmbiente.FormattingEnabled = true;
+            this.cmbAmbiente.Items.AddRange(new object[] {
+            "Producción",
+            "QA",
+            "Desarrollo"});
+            this.cmbAmbiente.Location = new System.Drawing.Point(139, 12);
+            this.cmbAmbiente.Name = "cmbAmbiente";
+            this.cmbAmbiente.Size = new System.Drawing.Size(92, 21);
+            this.cmbAmbiente.TabIndex = 13;
+            this.cmbAmbiente.Visible = false;
+            this.cmbAmbiente.SelectedIndexChanged += new System.EventHandler(this.cmbAmbiente_SelectedIndexChanged);
+            // 
+            // btnFirmarAmbiente
+            // 
+            this.btnFirmarAmbiente.BackColor = System.Drawing.Color.Transparent;
+            this.btnFirmarAmbiente.BackgroundImage = global::PluginInsViviendas_UNO.Properties.Resources.database_settings_icon;
+            this.btnFirmarAmbiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFirmarAmbiente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnFirmarAmbiente.FlatAppearance.BorderSize = 0;
+            this.btnFirmarAmbiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnFirmarAmbiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFirmarAmbiente.Location = new System.Drawing.Point(245, 9);
+            this.btnFirmarAmbiente.Name = "btnFirmarAmbiente";
+            this.btnFirmarAmbiente.Size = new System.Drawing.Size(23, 23);
+            this.btnFirmarAmbiente.TabIndex = 14;
+            this.btnFirmarAmbiente.UseVisualStyleBackColor = false;
+            this.btnFirmarAmbiente.Click += new System.EventHandler(this.btnFirmarAmbiente_Click);
+            // 
+            // txtAmbientePassword
+            // 
+            this.txtAmbientePassword.Location = new System.Drawing.Point(139, 13);
+            this.txtAmbientePassword.Name = "txtAmbientePassword";
+            this.txtAmbientePassword.PasswordChar = '*';
+            this.txtAmbientePassword.Size = new System.Drawing.Size(92, 20);
+            this.txtAmbientePassword.TabIndex = 15;
+            this.txtAmbientePassword.Visible = false;
+            this.txtAmbientePassword.TextChanged += new System.EventHandler(this.txtAmbientePassword_TextChanged);
+            // 
+            // btnAmbienteLogin
+            // 
+            this.btnAmbienteLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnAmbienteLogin.BackgroundImage = global::PluginInsViviendas_UNO.Properties.Resources.data_protection_icon;
+            this.btnAmbienteLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAmbienteLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAmbienteLogin.FlatAppearance.BorderSize = 0;
+            this.btnAmbienteLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnAmbienteLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAmbienteLogin.Location = new System.Drawing.Point(245, 9);
+            this.btnAmbienteLogin.Name = "btnAmbienteLogin";
+            this.btnAmbienteLogin.Size = new System.Drawing.Size(23, 23);
+            this.btnAmbienteLogin.TabIndex = 16;
+            this.btnAmbienteLogin.UseVisualStyleBackColor = false;
+            this.btnAmbienteLogin.Visible = false;
+            this.btnAmbienteLogin.Click += new System.EventHandler(this.btnAmbienteLogin_Click);
+            // 
             // SelDatosIniciales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,6 +393,10 @@
             this.BackgroundImage = global::PluginInsViviendas_UNO.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(405, 346);
+            this.Controls.Add(this.btnAmbienteLogin);
+            this.Controls.Add(this.txtAmbientePassword);
+            this.Controls.Add(this.btnFirmarAmbiente);
+            this.Controls.Add(this.cmbAmbiente);
             this.Controls.Add(this.SiMultifamiliar);
             this.Controls.Add(this.lblValueVivPdts);
             this.Controls.Add(this.lblVivPendientes);
@@ -394,5 +460,9 @@
         private System.Windows.Forms.Label lblResUser;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.CheckBox SiMultifamiliar;
+        private System.Windows.Forms.ComboBox cmbAmbiente;
+        private System.Windows.Forms.Button btnFirmarAmbiente;
+        private System.Windows.Forms.TextBox txtAmbientePassword;
+        private System.Windows.Forms.Button btnAmbienteLogin;
     }
 }

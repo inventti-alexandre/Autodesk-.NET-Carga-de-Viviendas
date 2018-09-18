@@ -237,7 +237,12 @@ namespace PluginInsViviendas_UNO.Controlador
                     for (int cell = 0; cell < Modelo.EncDatosPlano.VivsFinales.GetLength(1); cell++)
                     {
                         if (cell != Modelo.IndexColumn.UDFColumnaBnVivVerde && cell != Modelo.IndexColumn.UDFColumnaBnMuestra
-                            && cell != Modelo.IndexColumn.UDFColumnaBnDisponible && cell != Modelo.IndexColumn.UDFColumnaBnCablevision)
+                            && cell != Modelo.IndexColumn.UDFColumnaBnDisponible && cell != Modelo.IndexColumn.UDFColumnaBnCablevision
+                            //AZ Se agrearon nuevas columnas de checkbox
+                            && cell != Modelo.IndexColumn.UDFColumnaBnPermisoConstruccion && cell != Modelo.IndexColumn.UDFColumnaBnLadoSol
+                            && cell != Modelo.IndexColumn.UDFColumnaBnLadoSombra && cell != Modelo.IndexColumn.UDFColumnaBnFrenteParque
+                            && cell != Modelo.IndexColumn.UDFColumnaBnFrenteAvenida && cell != Modelo.IndexColumn.UDFColumnaBnEsEsquina
+                            && cell != Modelo.IndexColumn.UDFColumnaBnRegimen && cell != Modelo.IndexColumn.UDFColumnaBnGravamen)
                         {
                             dtDatosFinales.Rows[row].Cells[cell].Value
                                     = Modelo.EncDatosPlano.VivsFinales[row, cell];
@@ -261,7 +266,13 @@ namespace PluginInsViviendas_UNO.Controlador
                     for (int cell = 0; cell < Modelo.EncDatosPlano.VivsFinales.GetLength(1); cell++)
                     {
                         if (cell != Modelo.IndexColumn.MDFViviendaVerde && cell != Modelo.IndexColumn.MDFMuestra
-                            && cell != Modelo.IndexColumn.MDFDisponible && cell != Modelo.IndexColumn.MDFCablevision)
+                            && cell != Modelo.IndexColumn.MDFDisponible && cell != Modelo.IndexColumn.MDFCablevision
+                            //AZ Se agrearon nuevas columnas de checkbox
+                            && cell != Modelo.IndexColumn.MDFPermisoConstruccion && cell != Modelo.IndexColumn.MDFLadoSol
+                              && cell != Modelo.IndexColumn.MDFLadoSombra && cell != Modelo.IndexColumn.MDFFrenteParque
+                               && cell != Modelo.IndexColumn.MDFFrenteAvenida && cell != Modelo.IndexColumn.MDFEsEsquina
+                                && cell != Modelo.IndexColumn.MDFRegimen && cell != Modelo.IndexColumn.MDFGravamen
+                            )
                         {
                             dtDatosFinales.Rows[row].Cells[cell].Value
                                     = Modelo.EncDatosPlano.VivsFinales[row, cell];                            
@@ -388,15 +399,15 @@ namespace PluginInsViviendas_UNO.Controlador
 
                     //Asigno manzana
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .Manzana = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaManzana];
+                        .Manzana = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaManzana].Trim();
 
                     //Lote
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .NumeroLote = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaLote];
+                        .NumeroLote = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaLote].Trim();
 
                     //Número Oficial
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .NumeroOficial = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaNoOficial];
+                        .NumeroOficial = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaNoOficial].Trim();
 
                     //Piso
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
@@ -404,7 +415,7 @@ namespace PluginInsViviendas_UNO.Controlador
 
                     //Número Interior
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .NumeroInterior = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaNoInterior];
+                        .NumeroInterior = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaNoInterior].Trim();
 
                     //Unidad Privativa-----------------------------------------------------------------------------------------
                     if (!string.IsNullOrWhiteSpace(Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaUP]))
@@ -415,7 +426,7 @@ namespace PluginInsViviendas_UNO.Controlador
 
                         //Unidad Privativa
                         bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                            .UnidadPrivativa = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaUP];
+                            .UnidadPrivativa = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaUP].Trim();
                     }
                     else
                     {
@@ -425,29 +436,29 @@ namespace PluginInsViviendas_UNO.Controlador
 
                         //Unidad Privativa
                         bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                            .UnidadPrivativa = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaUP];
+                            .UnidadPrivativa = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaUP].Trim();
                     }
                     //----------------------------------------------------------------------------------------------------------
 
                     //Calle o Dirección
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .Direccion = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaDireccion];
+                        .Direccion = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaDireccion].Trim();
 
                     //M2 de Superficie
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .M2Superficie = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaM2Superficie];
+                        .M2Superficie = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaM2Superficie].Trim();
 
                     //Superficie Lote Tipo
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .SuperfloteTipo = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaSuperflotetipo];
+                        .SuperfloteTipo = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaSuperflotetipo].Trim();
 
                     //M2 Superficie Excedente
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .M2SuperficieExcedente = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaM2Excedente];
+                        .M2SuperficieExcedente = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaM2Excedente].Trim();
 
                     //Enviar M2 Construcción a viviendas unifamiliares 16/05/2017
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .M2Construccion = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaM2Construccion];
+                        .M2Construccion = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaM2Construccion].Trim();
 
                     //Vivienda Verde
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
@@ -465,6 +476,31 @@ namespace PluginInsViviendas_UNO.Controlador
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
                         .Cablevision = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaBnCablevision];
 
+                    //PermisoConstruccion
+                    //bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                    //    .PermisoConstruccion = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaBnPermisoConstruccion];
+                    //LadoSol
+                    bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                        .LadoSol = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaBnLadoSol];
+                    //LadoSombra
+                    bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                        .LadoSombra = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaBnLadoSombra];
+                    //FrenteParque
+                    bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                        .FlagFrenteParque = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaBnFrenteParque];
+                    //FrenteAvenida
+                    bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                        .FlagSobreAvenida = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaBnFrenteAvenida];
+                    //EsEsquina
+                    bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                        .Esquina = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaBnEsEsquina];
+                    //Regimen
+                    //bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                    //    .Regimen = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaBnRegimen];
+                    //Gravamen
+                    bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                        .FlagGravamen = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.UDFColumnaBnGravamen];
+
                 }
             }
             else//Multifamiliar
@@ -481,27 +517,27 @@ namespace PluginInsViviendas_UNO.Controlador
 
                     //Asigno prototipo
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .Prototipo = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaPrototipo];
+                        .Prototipo = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaPrototipo].Trim();
 
                     //Asigno manzana
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .Manzana = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaManzana];
+                        .Manzana = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaManzana].Trim();
 
                     //Lote
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .NumeroLote = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaLote];
+                        .NumeroLote = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaLote].Trim();
 
                     //Número Oficial
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .NumeroOficial = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaNoOficial];
+                        .NumeroOficial = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaNoOficial].Trim();
 
                     //Piso
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .Piso = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaPiso];
+                        .Piso = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaPiso].Trim();
 
                     //Número Interior
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .NumeroInterior = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaNoInterior];
+                        .NumeroInterior = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaNoInterior].Trim();
 
                     //Unidad Privativa-----------------------------------------------------------------------------------------
                     if (!string.IsNullOrWhiteSpace(Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaUP]))
@@ -512,7 +548,7 @@ namespace PluginInsViviendas_UNO.Controlador
 
                         //Unidad Privativa
                         bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                            .UnidadPrivativa = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaUP];
+                            .UnidadPrivativa = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaUP].Trim();
                     }
                     else
                     {
@@ -522,29 +558,29 @@ namespace PluginInsViviendas_UNO.Controlador
 
                         //Unidad Privativa
                         bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                            .UnidadPrivativa = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaUP];
+                            .UnidadPrivativa = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaUP].Trim();
                     }
                     //----------------------------------------------------------------------------------------------------------
 
                     //Calle o Dirección
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .Direccion = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaCalle];
+                        .Direccion = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaCalle].Trim();
 
                     //M2 de Superficie
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .M2Superficie = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaM2Sup];
+                        .M2Superficie = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaM2Sup].Trim();
 
                     //Superficie Lote Tipo
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .SuperfloteTipo = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaSuperfloteTipo];
+                        .SuperfloteTipo = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaSuperfloteTipo].Trim();
 
                     //M2 Superficie Excedente
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .M2SuperficieExcedente = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaM2Excedente];
+                        .M2SuperficieExcedente = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaM2Excedente].Trim();
 
                     //M2 de Construcción
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
-                        .M2Construccion = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaM2Construccion];
+                        .M2Construccion = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFColumnaM2Construccion].Trim();
 
                     //Vivienda Verde
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
@@ -561,10 +597,37 @@ namespace PluginInsViviendas_UNO.Controlador
                     //Cablevision
                     bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
                         .Cablevision = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFCablevision];
+
+                    //PermisoConstruccion
+                    //bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                    //    .PermisoConstruccion = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFPermisoConstruccion];
+                    //LadoSol
+                    bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                        .LadoSol = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFLadoSol];
+                    //LadoSombra
+                    bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                        .LadoSombra = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFLadoSombra];
+                    //FrenteParque
+                    bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                        .FlagFrenteParque = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFFrenteParque];
+                    //FrenteAvenida
+                    bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                        .FlagSobreAvenida = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFFrenteAvenida];
+                    //EsEsquina
+                    bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                        .Esquina = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFEsEsquina];
+
+                    //Regimen
+                    //bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                    //    .Regimen = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFRegimen];
+
+                    //Gravamen
+                    bulkupload.Fraccionamientos.Fraccionamiento[0].Frentes.Frente[0].Conjuntos.Conjunto[0].HomeList.Home[row]
+                        .FlagGravamen = Modelo.EncDatosPlano.VivsFinales[row, Modelo.IndexColumn.MDFGravamen];
                 }
 
             }
-
+            //AZ: Envia la carga al WS
             bulkResponse = bulkClient.BulkUpload(bulkupload);
 
             return bulkResponse;
@@ -581,7 +644,11 @@ namespace PluginInsViviendas_UNO.Controlador
                     foreach (DataGridViewCell dtcell in dtrow.Cells)
                     {
                         if (dtcell.ColumnIndex != Modelo.IndexColumn.MDFViviendaVerde && dtcell.ColumnIndex != Modelo.IndexColumn.MDFMuestra
-                            && dtcell.ColumnIndex != Modelo.IndexColumn.MDFDisponible && dtcell.ColumnIndex != Modelo.IndexColumn.MDFCablevision)
+                            && dtcell.ColumnIndex != Modelo.IndexColumn.MDFDisponible && dtcell.ColumnIndex != Modelo.IndexColumn.MDFCablevision
+                             && dtcell.ColumnIndex != Modelo.IndexColumn.MDFPermisoConstruccion && dtcell.ColumnIndex != Modelo.IndexColumn.MDFLadoSol
+                              && dtcell.ColumnIndex != Modelo.IndexColumn.MDFLadoSombra && dtcell.ColumnIndex != Modelo.IndexColumn.MDFFrenteParque
+                               && dtcell.ColumnIndex != Modelo.IndexColumn.MDFFrenteAvenida && dtcell.ColumnIndex != Modelo.IndexColumn.MDFEsEsquina
+                                && dtcell.ColumnIndex != Modelo.IndexColumn.MDFRegimen && dtcell.ColumnIndex != Modelo.IndexColumn.MDFGravamen)
                         {
                             Modelo.EncDatosPlano.VivsFinales[dtcell.RowIndex, dtcell.ColumnIndex] = dtcell.Value.ToString();
                         }
@@ -600,7 +667,11 @@ namespace PluginInsViviendas_UNO.Controlador
                     foreach (DataGridViewCell dtcell in dtrow.Cells)
                     {
                         if (dtcell.ColumnIndex != Modelo.IndexColumn.UDFColumnaBnVivVerde && dtcell.ColumnIndex != Modelo.IndexColumn.UDFColumnaBnMuestra
-                            && dtcell.ColumnIndex != Modelo.IndexColumn.UDFColumnaBnDisponible && dtcell.ColumnIndex != Modelo.IndexColumn.UDFColumnaBnCablevision)
+                            && dtcell.ColumnIndex != Modelo.IndexColumn.UDFColumnaBnDisponible && dtcell.ColumnIndex != Modelo.IndexColumn.UDFColumnaBnCablevision
+                            && dtcell.ColumnIndex != Modelo.IndexColumn.UDFColumnaBnPermisoConstruccion && dtcell.ColumnIndex != Modelo.IndexColumn.UDFColumnaBnLadoSol
+                            && dtcell.ColumnIndex != Modelo.IndexColumn.UDFColumnaBnLadoSombra && dtcell.ColumnIndex != Modelo.IndexColumn.UDFColumnaBnFrenteParque
+                            && dtcell.ColumnIndex != Modelo.IndexColumn.UDFColumnaBnFrenteAvenida && dtcell.ColumnIndex != Modelo.IndexColumn.UDFColumnaBnEsEsquina
+                            && dtcell.ColumnIndex != Modelo.IndexColumn.UDFColumnaBnRegimen && dtcell.ColumnIndex != Modelo.IndexColumn.UDFColumnaBnGravamen)
                         {
                             Modelo.EncDatosPlano.VivsFinales[dtcell.RowIndex, dtcell.ColumnIndex] = dtcell.Value.ToString();
                         }
@@ -617,17 +688,27 @@ namespace PluginInsViviendas_UNO.Controlador
         internal static bool SiSumaM2Excedente(DataGridView dtDatosFinales)
         {
             bool SiSumaCorrecta = true;
-            List<string> DistintosLotes = new List<string>();
+            //List<string> DistintosLotes = new List<string>();
+
+            HashSet<string> manzanasLotes = new HashSet<string>();
 
             foreach(DataGridViewRow dtrow in dtDatosFinales.Rows)
             {
-                if(!DistintosLotes.Contains((dtrow.Cells[Modelo.IndexColumn.MDFColumnaLote].Value ?? "").ToString()))
-                    DistintosLotes.Add((dtrow.Cells[Modelo.IndexColumn.MDFColumnaLote].Value ?? "").ToString());
+                //if(!DistintosLotes.Contains((dtrow.Cells[Modelo.IndexColumn.MDFColumnaLote].Value ?? "").ToString()))
+                //    DistintosLotes.Add((dtrow.Cells[Modelo.IndexColumn.MDFColumnaLote].Value ?? "").ToString());
+
+                manzanasLotes.Add(
+                                string.Format("{0}-{1}",
+                                                        (dtrow.Cells[Modelo.IndexColumn.MDFColumnaManzana].Value ?? "").ToString(),
+                                                        (dtrow.Cells[Modelo.IndexColumn.MDFColumnaLote].Value ?? "").ToString())
+                                );
+                
             }
 
-            foreach(string LoteActual in DistintosLotes)
+            foreach(string manzanaLoteActual in manzanasLotes)
             {
                 int     RenglonesLote = 0;
+
                 decimal SumaM2Superficie = 0,
                         SumaSuperficieLoteTipo = 0,
                         SumaExcedente = 0;
@@ -636,7 +717,10 @@ namespace PluginInsViviendas_UNO.Controlador
 
                 foreach(DataGridViewRow dtrow in dtDatosFinales.Rows)
                 {
-                    if((dtrow.Cells[Modelo.IndexColumn.MDFColumnaLote].Value ?? "").ToString() == LoteActual)
+                    string manzana = (dtrow.Cells[Modelo.IndexColumn.MDFColumnaManzana].Value ?? "").ToString(),
+                            lote = (dtrow.Cells[Modelo.IndexColumn.MDFColumnaLote].Value ?? "").ToString();
+
+                    if ((manzana + '-' + lote) == manzanaLoteActual)
                     {
                         RenglonesaMarcar.Add(dtrow.Index);
                         RenglonesLote += 1;
@@ -646,7 +730,7 @@ namespace PluginInsViviendas_UNO.Controlador
                     }
                 }
 
-                decimal excedenteRedondeo =((SumaM2Superficie - SumaSuperficieLoteTipo) / RenglonesLote);
+                decimal excedenteRedondeo = ((SumaM2Superficie - SumaSuperficieLoteTipo) / RenglonesLote);
 
                 string excedenteCorrecto = string.Format(MetodosPlano.EnviaFormatoArea(Modelo.EncDatosPlano.Decimales.ToString()),
                                                             excedenteRedondeo);

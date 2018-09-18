@@ -46,7 +46,15 @@ namespace PluginInsViviendas_UNO.Modelo
                             MDFViviendaVerde = 12,
                             MDFMuestra = 13,
                             MDFDisponible = 14,
-                            MDFCablevision = 15;
+                            MDFCablevision = 15,
+                            MDFPermisoConstruccion = 16,
+                            MDFLadoSol = 17,
+                            MDFLadoSombra = 18,
+                            MDFFrenteParque = 19,
+                            MDFFrenteAvenida = 20,
+                            MDFEsEsquina = 21,
+                            MDFRegimen = 22,
+                            MDFGravamen = 23;
         #endregion
 
 
@@ -76,7 +84,15 @@ namespace PluginInsViviendas_UNO.Modelo
                             UDFColumnaBnVivVerde = 10,
                             UDFColumnaBnMuestra = 11,
                             UDFColumnaBnDisponible = 12,
-                            UDFColumnaBnCablevision = 13;
+                            UDFColumnaBnCablevision = 13,
+                            UDFColumnaBnPermisoConstruccion = 14,
+                            UDFColumnaBnLadoSol = 15,
+                            UDFColumnaBnLadoSombra = 16,
+                            UDFColumnaBnFrenteParque = 17,
+                            UDFColumnaBnFrenteAvenida = 18,
+                            UDFColumnaBnEsEsquina = 19,
+                            UDFColumnaBnRegimen = 20,
+                            UDFColumnaBnGravamen = 21;
 
         #endregion
     }

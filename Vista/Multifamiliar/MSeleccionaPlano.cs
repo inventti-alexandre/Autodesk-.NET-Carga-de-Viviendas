@@ -294,8 +294,7 @@ namespace PluginInsViviendas_UNO.Vista.Multifamiliar
                         {
                             if (IdLotes.Count == 1 && IdLotes != null)
                             {
-                                NumeroLote = (Controlador.MetodosPlano.AbrirEntidad(idlote) as DBText).TextString;
-                                
+                                NumeroLote = (Controlador.MetodosPlano.AbrirEntidad(idlote) as DBText).TextString;                                
                             }
                             else if (IdLotes.Count > 1)
                             {
@@ -319,24 +318,20 @@ namespace PluginInsViviendas_UNO.Vista.Multifamiliar
                     IdsNoOficial = Controlador.MetodosPlano.TomaNoOficialLayer(pl, Modelo.EncDatosConfiguracion.LayerNoOficial,
                                                                                     Modelo.EncDatosConfiguracion.FactorEscala);
 
-                    foreach (ObjectId idNoOficial in IdsNoOficial)
+                    if(IdsNoOficial.Count >= 1)
                     {
-                        if (IdsNoOficial.Count == 1)
+                        foreach (ObjectId idNoOficial in IdsNoOficial)
                         {
                             NumeroOficial = (Controlador.MetodosPlano.AbrirEntidad(idNoOficial) as DBText).TextString;
 
-                            cmbNoOficial.Items.Add(NumeroOficial);                           
+                            cmbNoOficial.Items.Add(NumeroOficial.Replace(" ", ""));
+
                         }
-                        else if (IdsNoOficial.Count > 1)
-                        {
-                            NumeroOficial = (Controlador.MetodosPlano.AbrirEntidad(idNoOficial) as DBText).TextString;
-                            cmbNoOficial.Items.Add(NumeroOficial);                           
-                        }
-                        else
-                        {
-                            Modelo.EncDatosConfiguracion.MsjGlobal.Add("No se encontraron elementos en la capa: " +
-                                                                            Modelo.EncDatosConfiguracion.LayerNoOficial);
-                        }
+                    }
+                    else
+                    {
+                        Modelo.EncDatosConfiguracion.MsjGlobal.Add("No se encontraron elementos en la capa: " +
+                                                                           Modelo.EncDatosConfiguracion.LayerNoOficial);
                     }
                     //-----------------------------------------------------------------------------------------------------------------
 
@@ -473,15 +468,15 @@ namespace PluginInsViviendas_UNO.Vista.Multifamiliar
                                                 Número Oficial, Número de Lote,  M2 Superficie, Unidad Privativa, Direccion*/
                             dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaIDPlLote].Value = IdVivienda;
                             dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaIDs].Value = idViviendaLote;
-                            dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaManzana].Value = manzanaActual;                            
+                            dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaManzana].Value = manzanaActual.Replace(" ", "");                            
                             ((DataGridViewComboBoxCell)dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaNoOficial]).DataSource = cmbNoOficial.Items; 
-                            dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaLote].Value = NumeroLote;
+                            dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaLote].Value = NumeroLote.Replace(" ", "");
                             dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaM2Sup].Value = Areapl;
-                            dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaUP].Value = strUnidadPrivativa;
+                            dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaUP].Value = strUnidadPrivativa.Replace(" ", "");
                             dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaCalle].Value = direccion;
 
                             //Valores cada Vivienda: Número Interior, Prototipo, Piso
-                            dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaNoInterior].Value = NumeroInterior;
+                            dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaNoInterior].Value = NumeroInterior.Replace(" ", "");
                             dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaPrototipo].Value = PrototipoActual;
                             dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaPiso].Value = Piso;
 
@@ -603,25 +598,22 @@ namespace PluginInsViviendas_UNO.Vista.Multifamiliar
                         IdsNoOficial = Controlador.MetodosPlano.TomaNoOficialLayer(plLote,  Modelo.EncDatosConfiguracion.LayerNoOficial,
                                                                                             Modelo.EncDatosConfiguracion.FactorEscala);
 
-                        foreach (ObjectId idNoOficial in IdsNoOficial)
+                        if (IdsNoOficial.Count >= 1)
                         {
-                            if (IdsNoOficial.Count == 1)
+                            foreach (ObjectId idNoOficial in IdsNoOficial)
                             {
                                 NumeroOficial = (Controlador.MetodosPlano.AbrirEntidad(idNoOficial) as DBText).TextString;
 
-                                cmbNoOficial.Items.Add(NumeroOficial);
-                            }
-                            else if (IdsNoOficial.Count > 1)
-                            {
-                                NumeroOficial = (Controlador.MetodosPlano.AbrirEntidad(idNoOficial) as DBText).TextString;
-                                cmbNoOficial.Items.Add(NumeroOficial);
-                            }
-                            else
-                            {
-                                Modelo.EncDatosConfiguracion.MsjGlobal.Add("No se encontraron elementos en la capa: " +
-                                                                                Modelo.EncDatosConfiguracion.LayerNoOficial);
+                                cmbNoOficial.Items.Add(NumeroOficial.Replace(" ", ""));
+
                             }
                         }
+                        else
+                        {
+                            Modelo.EncDatosConfiguracion.MsjGlobal.Add("No se encontraron elementos en la capa: " +
+                                                                               Modelo.EncDatosConfiguracion.LayerNoOficial);
+                        }
+                        
                         //-----------------------------------------------------------------------------------------------------------------
 
                         //M2 Superficie - Calculo el área de la polílinea------------------------------------------------------------------ 
@@ -761,15 +753,15 @@ namespace PluginInsViviendas_UNO.Vista.Multifamiliar
                                                     Número Oficial, Número de Lote,  M2 Superficie, Unidad Privativa, Direccion*/
                                 dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaIDs].Value = idViviendaLote;
                                 dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaIDPlLote].Value = IdLotePrincipal;
-                                dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaManzana].Value = manzanaActual;
+                                dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaManzana].Value = manzanaActual.Replace(" ", "");
                                 ((DataGridViewComboBoxCell)dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaNoOficial]).DataSource = cmbNoOficial.Items;
-                                dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaLote].Value = NumeroLote;
+                                dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaLote].Value = NumeroLote.Replace(" ", "");
                                 dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaM2Sup].Value = Areapl;
-                                dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaUP].Value = strUnidadPrivativa;
+                                dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaUP].Value = strUnidadPrivativa.Replace(" ", "");
                                 dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaCalle].Value = direccion;
 
                                 //Valores cada Vivienda: Número Interior, Prototipo, Piso
-                                dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaNoInterior].Value = NumeroInterior;
+                                dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaNoInterior].Value = NumeroInterior.Replace(" ", "");
                                 dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaPrototipo].Value = PrototipoActual;
                                 dtDatosPlano.Rows[index].Cells[Modelo.IndexColumn.MSDPColumnaPiso].Value = Piso;
 
@@ -922,6 +914,7 @@ namespace PluginInsViviendas_UNO.Vista.Multifamiliar
                         if (bnErrorTipoDato == true || bnErrorVacio == true)
                         {
                             Modelo.EncDatosPlano.M2SuperFloteTipo.Clear();
+
                             if (bnErrorTipoDato == true && bnErrorVacio == true)                            
                                 MessageBox.Show("Favor de revisar tipos de datos incorrectos y vacíos", "Advertencia", MessageBoxButtons.OK);                            
 
@@ -934,6 +927,7 @@ namespace PluginInsViviendas_UNO.Vista.Multifamiliar
                         else //En dado caso que no haya error de formato de dato o vacíos que son obligatorios
                         {
                             bool siUP = Controlador.MetodosPlano.SiValidaUP(dtDatosPlano, Modelo.IndexColumn.MSDPColumnaUP);
+
                             if (siUP)
                             {
                                 MDatosFinales df = new MDatosFinales();

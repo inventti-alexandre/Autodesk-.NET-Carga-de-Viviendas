@@ -14,6 +14,7 @@ namespace PluginInsViviendas_UNO.Vista
 {
     public partial class SelDatosIniciales : Form
     {
+        private Boolean noRefrescarConexion = false;
         public SelDatosIniciales()
         {
             InitializeComponent();
@@ -31,7 +32,21 @@ namespace PluginInsViviendas_UNO.Vista
         public bool ActualizaConjunto;
 
         private void SelDatosIniciales_Load(object sender, EventArgs e)
-        {            
+        {
+            noRefrescarConexion = true;
+            switch (Modelo.EncDatosServicio.AppAmbiente)
+            {
+                case "PROD": cmbAmbiente.SelectedIndex = 0; break;
+                case "QA": cmbAmbiente.SelectedIndex = 1; break;
+                case "DESA": cmbAmbiente.SelectedIndex = 2; break;
+            }
+            if (Modelo.EncDatosServicio.AppAmbienteFirmado == true)
+            {
+                btnFirmarAmbiente.Visible = false;
+                btnAmbienteLogin.Visible = false;
+                txtAmbientePassword.Visible = false;
+                cmbAmbiente.Visible = true;
+            }
             if (Modelo.EncDatosServicio.FraccsRecibidos != null && Modelo.EncDatosServicio.ProtosRecibidos != null)
             {
                 if (Modelo.EncDatosServicio.FraccsRecibidos.Count() > 0 && Modelo.EncDatosServicio.ProtosRecibidos.Count() > 0)
@@ -102,6 +117,9 @@ namespace PluginInsViviendas_UNO.Vista
                 //Obtengo Usuario e IP y asigno a el Encapsulado de Datos
                 Controlador.DatosSesion.AsignaUsuarioIP();
                 lblResUser.Text = Modelo.EncDatosIniciales.User;
+                
+               
+                
             }
         }
 
@@ -237,7 +255,7 @@ namespace PluginInsViviendas_UNO.Vista
                 Modelo.EncDatosIniciales.ComboIndexConjunto = cmbConjunto.SelectedIndex;
                 Modelo.EncDatosIniciales.Conjunto = this.cmbConjunto.SelectedItem.ToString();
                 this.btnSiguiente.Visible = true;
-                                //Asigno Fideicomiso
+                //Asigno Fideicomiso
 
                 Modelo.EncDatosIniciales.ViviendasMaximas = Modelo.EncDatosServicio.FraccsRecibidos[Modelo.EncDatosIniciales.IndexFraccionamiento].
                                                                 Frentes.Frente[Modelo.EncDatosIniciales.IndexFrente].Conjuntos.Conjunto[cmbConjunto.SelectedIndex].HomeQuantity;
@@ -297,8 +315,8 @@ namespace PluginInsViviendas_UNO.Vista
                             MessageBox.Show("El Frente no cuenta con Fideicomiso", "Información del Frente", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
 
-                            if(!SiMultifamiliar.Checked)
-                            { 
+                            if (!SiMultifamiliar.Checked)
+                            {
                                 Unifamiliar.USelDatosPlano sdp = new Unifamiliar.USelDatosPlano();
                                 //P3_CompDatos.V.BtViviendasError sdp = new P3_CompDatos.V.BtViviendasError();
 
@@ -366,14 +384,14 @@ namespace PluginInsViviendas_UNO.Vista
 
         //Comienza el llamado del servicio SOA
         public void BGWorker_DoWork(object sender, DoWorkEventArgs e)
-        {            
+        {
             //1. Binding agregandole transporte y parametros para ambos servicios
             CustomBinding csBinding = Controlador.ConfiguraServicio.AsignaCustomBinding();
             bkWork.ReportProgress(10);
-       //----------------------------------------------------------------------------------------------------------------
+            //----------------------------------------------------------------------------------------------------------------
             #region LlamaServicioPrototipos
             //2. Asigno URL de endpoint de Protototipos
-            EndpointAddress endpointAddressPrototipos= new
+            EndpointAddress endpointAddressPrototipos = new
             EndpointAddress(Modelo.EncDatosServicio.WsdlPrototipos);
 
             bkWork.ReportProgress(20);
@@ -389,7 +407,7 @@ namespace PluginInsViviendas_UNO.Vista
             solicitoPrototipos.Username = Modelo.EncDatosIniciales.User;//Usuario Correcto
             solicitoPrototipos.RequestDate = DateTime.Now;
             solicitoPrototipos.SourceSystem = "AUTODESK";
-            solicitoPrototipos.Version = "1";            
+            solicitoPrototipos.Version = "1";
             //-------------------------------------------------------
 
             //Recibo Datos de Prototipos
@@ -419,7 +437,7 @@ namespace PluginInsViviendas_UNO.Vista
             solicitoFracc.Version = "1";
             bkWork.ReportProgress(80);
             //------------------------------------------------------------------------ 
-          
+
             //Realizo solicitud de datos de Fraccionamientos
             reciboFracc = serviceClientFracc.GetFraccionamientosByUserAndRight(solicitoFracc);
             bkWork.ReportProgress(100);
@@ -432,10 +450,10 @@ namespace PluginInsViviendas_UNO.Vista
         private void bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             Boolean SiFraccionamientos = false;
-                SiFraccionamientos = reciboFracc.Success;
+            SiFraccionamientos = reciboFracc.Success;
             Boolean SiPrototipos = false;
-                SiPrototipos = reciboPrototipos.Success;
-            
+            SiPrototipos = reciboPrototipos.Success;
+
             if (SiFraccionamientos == true && SiPrototipos == true)
             {
                 //Despliego la conexión
@@ -446,7 +464,7 @@ namespace PluginInsViviendas_UNO.Vista
                 lblsetEstatus.Text = "Online";
                 lblsetEstatus.ForeColor = Color.Green;
                 btnRefresh.Visible = true;
-
+               
                 //Encapsulo Datos Recibidos
                 Modelo.EncDatosServicio.FraccsRecibidos = reciboFracc.Fraccionamientos.Fraccionamiento;
                 Modelo.EncDatosServicio.ProtosRecibidos = reciboPrototipos.Prototipos.Prototipo;
@@ -454,6 +472,7 @@ namespace PluginInsViviendas_UNO.Vista
                 //Asigno los Fraccionamietos en el combobox siempre y cuando tenga permiso a ellos ( Si no se recibe como null)
                 if (Modelo.EncDatosServicio.FraccsRecibidos != null && Modelo.EncDatosServicio.ProtosRecibidos != null)
                 {
+                    Modelo.EncDatosServicio.ListaFraccNombres.Clear();
                     //Agrego a listas tanto el nombre como la posición del servicio
                     for (int i = 0; i < Modelo.EncDatosServicio.FraccsRecibidos.Count(); i++) //
                     {
@@ -468,7 +487,7 @@ namespace PluginInsViviendas_UNO.Vista
                     foreach (String indFracc in Modelo.EncDatosServicio.ListaFraccNombres)
                     {
                         cmbFraccionamiento.Items.Add(indFracc);
-                    }                    
+                    }
 
                     //Agrego directamente los prototipos
                     for (int i = 0; i < Modelo.EncDatosServicio.ProtosRecibidos.Count(); i++)
@@ -488,11 +507,11 @@ namespace PluginInsViviendas_UNO.Vista
                 }
                 //Valido que no tengo acceso y no despliego nada
                 else
-                    MessageBox.Show("Favor de revisar permisos en Sembrado \n del usuario "+Modelo.EncDatosIniciales.User);
+                    MessageBox.Show("Favor de revisar permisos en Sembrado \n del usuario " + Modelo.EncDatosIniciales.User);
             }
             else
             {
-                MessageBox.Show("Error de conexión favor de contactar al administrador","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error de conexión favor de contactar al administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 lblConectando.Visible = false;
                 progressBar.Visible = false;
             }
@@ -542,6 +561,49 @@ namespace PluginInsViviendas_UNO.Vista
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            refrescarConexion();
+           
+        }
+
+        private void SiMultifamiliar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (SiMultifamiliar.Checked == true)
+            {
+                cmbPrototipo.SelectedIndex = -1;
+                cmbPrototipo.Enabled = false;
+                Modelo.EncDatosIniciales.EsMultifamiliar = true;
+            }
+            else
+            {
+                cmbPrototipo.Enabled = true;
+                Modelo.EncDatosIniciales.EsMultifamiliar = false;
+            }
+        }
+
+        private void cmbAmbiente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (noRefrescarConexion)
+            { noRefrescarConexion = false; }
+            else {
+                //seleccion de ambiente
+                Modelo.EncDatosServicio.AppAmbiente = "PROD";
+                switch (cmbAmbiente.SelectedIndex.ToString())
+                {
+                    case "0": Modelo.EncDatosServicio.AppAmbiente = "PROD"; break;
+                    case "1": Modelo.EncDatosServicio.AppAmbiente = "QA"; break;
+                    case "2": Modelo.EncDatosServicio.AppAmbiente = "DESA"; break;
+                }
+
+                //Funcion de refrescar la conexion
+                refrescarConexion();
+            }
+           
+           
+        }
+
+        private void refrescarConexion()
+        {
+
             //Cambio visibilidad
             this.lblConectando.Visible = true;
             progressBar.Visible = true;
@@ -549,9 +611,9 @@ namespace PluginInsViviendas_UNO.Vista
             lblVivPendientes.Visible = false;
             btnSiguiente.Visible = false;
             //Deshabilito los combobox          
-            cmbConjunto.Enabled = false;            
-            cmbFrente.Enabled = false;          
-            cmbFraccionamiento.Enabled = false;            
+            cmbConjunto.Enabled = false;
+            cmbFrente.Enabled = false;
+            cmbFraccionamiento.Enabled = false;
             cmbPrototipo.Enabled = false;
             SiMultifamiliar.Enabled = false;
 
@@ -572,19 +634,48 @@ namespace PluginInsViviendas_UNO.Vista
             bkWork.ProgressChanged += new ProgressChangedEventHandler(bw_ProgressChanged);
         }
 
-        private void SiMultifamiliar_CheckedChanged(object sender, EventArgs e)
+        private void btnFirmarAmbiente_Click(object sender, EventArgs e)
         {
-            if(SiMultifamiliar.Checked == true)
+            btnIniciarSesion.Visible = false;
+            btnRefresh.Visible = false;
+            txtAmbientePassword.Visible = true;
+            txtAmbientePassword.Text = "";
+            txtAmbientePassword.Focus();
+            btnFirmarAmbiente.Visible = false;
+            btnAmbienteLogin.Visible = true;
+        }
+
+        private void btnAmbienteLogin_Click(object sender, EventArgs e)
+        {
+            if (Modelo.EncDatosServicio.AppAmbientePass == txtAmbientePassword.Text)
             {
-                cmbPrototipo.SelectedIndex = -1;
-                cmbPrototipo.Enabled = false;
-                Modelo.EncDatosIniciales.EsMultifamiliar = true;
+                btnFirmarAmbiente.Visible = false;
+                btnAmbienteLogin.Visible = false;
+                txtAmbientePassword.Visible = false;
+                cmbAmbiente.Visible = true;
+                Modelo.EncDatosServicio.AppAmbienteFirmado = true;
+                btnIniciarSesion.Visible = true;
+                btnRefresh.Visible = true;
+
             }
             else
             {
-                cmbPrototipo.Enabled = true;
-                Modelo.EncDatosIniciales.EsMultifamiliar = false;
+                MessageBox.Show("Contraseña incorrecta");
+                btnIniciarSesion.Visible = true;
+                btnRefresh.Visible = true;
+                btnFirmarAmbiente.Visible = true;
+                btnAmbienteLogin.Visible = false;
+                txtAmbientePassword.Visible = false;
+                cmbAmbiente.Visible = false;
+
+
+                Modelo.EncDatosServicio.AppAmbienteFirmado = false;
             }
+        }
+
+        private void txtAmbientePassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

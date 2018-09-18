@@ -8,6 +8,8 @@ namespace PluginInsViviendas_UNO.Vista.Unifamiliar
 {
     public partial class UDatosFinales : Form
     {
+        //Bandera para mostrar u ocultar condiciones especiales 
+        private bool verCondicionesEspeciales = false; 
         public UDatosFinales()
         {
             InitializeComponent();            
@@ -58,8 +60,38 @@ namespace PluginInsViviendas_UNO.Vista.Unifamiliar
                 cmbSuperFlote.Items.Add(superflote);
             }
 
-            cmbSuperFlote.SelectedIndex = -1;            
+            cmbSuperFlote.SelectedIndex = -1;
             //-------------------------------------------------------------------
+
+            //Realizo llenado de superflote tipo
+            foreach (double superflote in Modelo.EncDatosPlano.M2SuperFloteTipo)
+            {
+                //Cmb Superflote Tipo
+                chlSuperFlote.Items.Add(superflote);
+                cmbSuperFlote.Items.Add(superflote);
+            }
+
+            //Buscar el valor mas chico como default
+            Double minSuperflote = 100000000;
+            Double auxSuperflote = 0;
+            for (int i = 0; i < chlSuperFlote.Items.Count; i++)
+            {
+                try { auxSuperflote = Double.Parse(chlSuperFlote.Items[i].ToString()); }
+                catch
+                { auxSuperflote = 0; }
+                if (minSuperflote >= auxSuperflote)
+                {
+                    for (int j = 0; j < chlSuperFlote.Items.Count; j++)
+                    { chlSuperFlote.SetItemChecked(j, false); }
+                    chlSuperFlote.SetItemChecked(i, true);
+                    minSuperflote = auxSuperflote;
+                }
+
+
+            }
+
+            //se llena y calculan los metros en la tabla
+            actualizaSuperFloteCalculos();
         }
 
         
@@ -279,36 +311,80 @@ namespace PluginInsViviendas_UNO.Vista.Unifamiliar
                     string areaPl = "";
 
                     //M2 Superficie - Calculo el área de la polílinea------------------------------------------------------------------ 
-                    areaPl = string.Format(Controlador.MetodosPlano.EnviaFormatoArea(Modelo.EncDatosPlano.Decimales.ToString()), pl.Area);                    
+                    areaPl = string.Format(Controlador.MetodosPlano.EnviaFormatoArea(Modelo.EncDatosPlano.Decimales.ToString()), pl.Area);
 
-                    foreach (DataGridViewRow dtrow in dtDatosFinales.Rows)
+                    Double dareaPl = 0;
+                    Double dareachlSuperFlote = 0;
+
+                    try { dareaPl = Double.Parse(areaPl); }
+                    catch
+                    { dareaPl = 0; }
+
+
+
+
+                    //Buscar el valor mas chico como default
+                    bool registroEncontrado = false;
+                    for (int i = 0; i < chlSuperFlote.Items.Count; i++)
                     {
-                        float   m2superficieactual = 0,
-                                superfloteactual = 0;
-                        string  excedente = "";
+                        try { dareachlSuperFlote = Double.Parse(chlSuperFlote.Items[i].ToString()); }
+                        catch
+                        { dareachlSuperFlote = 0; }
 
-                        dtrow.Cells[Modelo.IndexColumn.UDFColumnaSuperflotetipo].Value = areaPl;
+                        if (dareachlSuperFlote == dareaPl)
+                        {
+                            registroEncontrado = true;
+                            chlSuperFlote.SetItemChecked(i, true);
+                            // break;
+                        }
 
-                        //Parse a float
-                        m2superficieactual = float.Parse(dtrow.Cells[Modelo.IndexColumn.UDFColumnaM2Superficie].Value.ToString());
-                        superfloteactual = float.Parse(areaPl);
 
-                        //Calculo Excedente
-                        excedente = string.Format(Controlador.MetodosPlano.EnviaFormatoArea(Modelo.EncDatosPlano.Decimales.ToString()), //Decimales a asignar
-                                                    (m2superficieactual - superfloteactual));//Excedentes
 
-                        //Asigno Excedente
-                        dtrow.Cells[Modelo.IndexColumn.UDFColumnaM2Excedente].Value = excedente;
                     }
 
-                    //Asingo paso 3
-                    lblpaso1.Font = new System.Drawing.Font(lblpaso1.Font, FontStyle.Regular);
-                    lblpaso2.Font = new System.Drawing.Font(lblpaso2.Font, FontStyle.Regular);
-                    lblpaso3.Font = new System.Drawing.Font(lblpaso2.Font, FontStyle.Bold);
+                    if (registroEncontrado)
+                    {
+                        //se llena y calculan los metros en la tabla
+                        actualizaSuperFloteCalculos();
+                        //Envío señal de paso cumplido
+                        checkSFT.Checked = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("El área de la polilínea seleccionada no se encontró en la lista de Tipos de Lotes",
+                       "Selección del Plano", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    }
 
-                    //Envío señal de paso cumplido
-                    checkSFT.Checked = true;
-                    checkExcedente.Checked = true;
+
+                    
+                    //foreach (DataGridViewRow dtrow in dtDatosFinales.Rows)
+                    //{
+                    //    float   m2superficieactual = 0,
+                    //            superfloteactual = 0;
+                    //    string  excedente = "";
+
+                    //    dtrow.Cells[Modelo.IndexColumn.UDFColumnaSuperflotetipo].Value = areaPl;
+
+                    //    //Parse a float
+                    //    m2superficieactual = float.Parse(dtrow.Cells[Modelo.IndexColumn.UDFColumnaM2Superficie].Value.ToString());
+                    //    superfloteactual = float.Parse(areaPl);
+
+                    //    //Calculo Excedente
+                    //    excedente = string.Format(Controlador.MetodosPlano.EnviaFormatoArea(Modelo.EncDatosPlano.Decimales.ToString()), //Decimales a asignar
+                    //                                (m2superficieactual - superfloteactual));//Excedentes
+
+                    //    //Asigno Excedente
+                    //    dtrow.Cells[Modelo.IndexColumn.UDFColumnaM2Excedente].Value = excedente;
+                    //}
+
+                    ////Asingo paso 3
+                    //lblpaso1.Font = new System.Drawing.Font(lblpaso1.Font, FontStyle.Regular);
+                    //lblpaso2.Font = new System.Drawing.Font(lblpaso2.Font, FontStyle.Regular);
+                    //lblpaso3.Font = new System.Drawing.Font(lblpaso2.Font, FontStyle.Bold);
+
+                    ////Envío señal de paso cumplido
+                    //checkSFT.Checked = true;
+                    //checkExcedente.Checked = true;
 
                 }
                 else
@@ -337,9 +413,12 @@ namespace PluginInsViviendas_UNO.Vista.Unifamiliar
 
         private void bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            if (!CargaVivForm.IsDisposed)
+                CargaVivForm.Close();
+
             if (Modelo.EncapsulaBitacora.Bulkresponse.Success == true)
             {
-                CargaVivForm.Close();
+                //CargaVivForm.Close();
                 CargaVivForm = new Vista.CargandoViviendas();
                 UBtViviendasError FormVivError = new UBtViviendasError();
                 FormVivError.Show();
@@ -348,7 +427,9 @@ namespace PluginInsViviendas_UNO.Vista.Unifamiliar
             }
             else
             {
-                MessageBox.Show("Error de conexión, favor de contactar administrador \n Error: "+ Modelo.EncapsulaBitacora.Bulkresponse.Error ,
+                MessageBox.Show("Error de conexión, favor de contactar administrador \n Error: "
+                                + Modelo.EncapsulaBitacora.Bulkresponse.Error.Code + " - " 
+                                + Modelo.EncapsulaBitacora.Bulkresponse.Error.ShortText ,
                                     "Error en Carga a Sembrado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -449,5 +530,161 @@ namespace PluginInsViviendas_UNO.Vista.Unifamiliar
             t1.Show("Todas con Cablevisión", chkCablefull, 5000);
         }
         #endregion
+
+        private void btnCondicionesEspeciales_Click(object sender, EventArgs e)
+        {
+            if (verCondicionesEspeciales)
+            {
+                btnCondicionesEspeciales.Text = "Condiciones Especiales";
+                dtDatosFinales.Columns["Cablevision"].Visible = false;
+                dtDatosFinales.Columns["PermisoConstruccion"].Visible = false;
+                dtDatosFinales.Columns["LadoSol"].Visible = false;
+                dtDatosFinales.Columns["LadoSombra"].Visible = false;
+                dtDatosFinales.Columns["FrenteParque"].Visible = false;
+                dtDatosFinales.Columns["FrenteAvenida"].Visible = false;
+                dtDatosFinales.Columns["EsEsquina"].Visible = false;
+                dtDatosFinales.Columns["Regimen"].Visible = false;
+                dtDatosFinales.Columns["Gravamen"].Visible = false;
+
+                dtDatosFinales.Columns["Calle"].Visible = true;
+                dtDatosFinales.Columns["M2Superficie"].Visible = true;
+                dtDatosFinales.Columns["SuperfloteTipo"].Visible = true;
+                dtDatosFinales.Columns["M2Excedente"].Visible = true;
+                dtDatosFinales.Columns["M2Construccion"].Visible = true;
+                dtDatosFinales.Columns["VivVerde"].Visible = true;
+                dtDatosFinales.Columns["Muestra"].Visible = true;
+                dtDatosFinales.Columns["Disponible"].Visible = true;
+                txtM2Const.Visible = true;
+                btnM2Const.Visible = true;
+                verCondicionesEspeciales = false;
+            }
+            else {
+                btnCondicionesEspeciales.Text = "Datos Finales";
+                dtDatosFinales.Columns["Cablevision"].Visible = true;
+                //dtDatosFinales.Columns["PermisoConstruccion"].Visible = true;
+                dtDatosFinales.Columns["LadoSol"].Visible = true;
+                dtDatosFinales.Columns["LadoSombra"].Visible = true;
+                dtDatosFinales.Columns["FrenteParque"].Visible = true;
+                dtDatosFinales.Columns["FrenteAvenida"].Visible = true;
+                dtDatosFinales.Columns["EsEsquina"].Visible = true;
+                //dtDatosFinales.Columns["Regimen"].Visible = true;
+                dtDatosFinales.Columns["Gravamen"].Visible = true;
+
+                dtDatosFinales.Columns["Calle"].Visible = false;
+                dtDatosFinales.Columns["M2Superficie"].Visible = false;
+                dtDatosFinales.Columns["SuperfloteTipo"].Visible = false;
+                dtDatosFinales.Columns["M2Excedente"].Visible = false;
+                dtDatosFinales.Columns["M2Construccion"].Visible = false;
+                dtDatosFinales.Columns["VivVerde"].Visible = false;
+                dtDatosFinales.Columns["Muestra"].Visible = false;
+                dtDatosFinales.Columns["Disponible"].Visible = false;
+                txtM2Const.Visible = false;
+                btnM2Const.Visible = false;
+                verCondicionesEspeciales = true;
+            }
+
+        }
+
+        private void dtDatosFinales_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            bool seleccionarTodos = true;
+
+
+            if (e.ColumnIndex == Modelo.IndexColumn.UDFColumnaBnVivVerde || e.ColumnIndex == Modelo.IndexColumn.UDFColumnaBnMuestra
+            || e.ColumnIndex == Modelo.IndexColumn.UDFColumnaBnDisponible || e.ColumnIndex == Modelo.IndexColumn.UDFColumnaBnCablevision
+            || e.ColumnIndex == Modelo.IndexColumn.UDFColumnaBnPermisoConstruccion || e.ColumnIndex == Modelo.IndexColumn.UDFColumnaBnLadoSol
+            || e.ColumnIndex == Modelo.IndexColumn.UDFColumnaBnLadoSombra || e.ColumnIndex == Modelo.IndexColumn.UDFColumnaBnFrenteParque
+            || e.ColumnIndex == Modelo.IndexColumn.UDFColumnaBnFrenteAvenida || e.ColumnIndex == Modelo.IndexColumn.UDFColumnaBnEsEsquina
+            || e.ColumnIndex == Modelo.IndexColumn.UDFColumnaBnRegimen || e.ColumnIndex == Modelo.IndexColumn.UDFColumnaBnGravamen)
+            {
+                dtDatosFinales.EndEdit();
+                dtDatosFinales.CurrentCell = null;
+                
+                foreach (DataGridViewRow dtgvrow in dtDatosFinales.Rows)
+                {
+  
+                    if (((Convert.ToBoolean(dtgvrow.Cells[e.ColumnIndex].Value) ? 1 : 0).ToString()) == "1")
+                    {
+                        seleccionarTodos = false;
+                    }
+                    else { seleccionarTodos = true; }
+                    break;
+                }
+
+                foreach (DataGridViewRow dtgvrow in dtDatosFinales.Rows)
+                {
+                    dtgvrow.Cells[e.ColumnIndex].Value = seleccionarTodos;
+                }
+
+            }
+          
+        }
+
+        private void chlSuperFlote_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //se llena y calculan los metros en la tabla
+            actualizaSuperFloteCalculos();
+        }
+
+        //se llena y calculan los metros en la tabla
+        private void actualizaSuperFloteCalculos()
+        {
+            Double m2Superficie = 0;
+            Double auxSuperflote = 0;
+            Double selSuperflote = 0;
+            Double m2Diferencia = 100000000;
+            Boolean chlSuperFloteSelected = false;
+            Boolean minDif = true;
+            foreach (DataGridViewRow dtrow in dtDatosFinales.Rows)
+            {
+                m2Diferencia = 100000000;
+                try { m2Superficie = Double.Parse(dtrow.Cells[Modelo.IndexColumn.UDFColumnaM2Superficie].Value.ToString()); }
+                catch { m2Superficie = 0; }
+
+                dtrow.Cells[Modelo.IndexColumn.UDFColumnaSuperflotetipo].Value = 0;
+                dtrow.Cells[Modelo.IndexColumn.UDFColumnaM2Excedente].Value = 0;
+                for (int i = 0; i < chlSuperFlote.Items.Count; i++)
+                {
+                    if (chlSuperFlote.GetItemCheckState(i) == CheckState.Checked)
+                    {
+                        chlSuperFloteSelected = true;
+                        try { auxSuperflote = Double.Parse(chlSuperFlote.Items[i].ToString()); }
+                        catch
+                        { auxSuperflote = 0; }
+
+
+                        if (m2Superficie - auxSuperflote >= 0 && (m2Superficie - auxSuperflote) <= m2Diferencia)
+                        {
+                            m2Diferencia = m2Superficie - auxSuperflote;
+                            selSuperflote = auxSuperflote;
+
+                        }
+                    }
+
+                }
+
+                dtrow.Cells[Modelo.IndexColumn.UDFColumnaSuperflotetipo].Value = selSuperflote;
+                dtrow.Cells[Modelo.IndexColumn.UDFColumnaM2Excedente].Value = Math.Round(m2Superficie - selSuperflote,2);
+
+                if (Math.Round(m2Superficie - selSuperflote, 2) < 0)
+                {
+                    minDif = false;
+                }
+                //Asingo paso 2
+                lblpaso1.Font = new System.Drawing.Font(lblpaso1.Font, FontStyle.Regular);
+                lblpaso2.Font = new System.Drawing.Font(lblpaso2.Font, FontStyle.Bold);
+
+                //    dtrow.Cells[Modelo.IndexColumn.UDFColumnaM2Excedente].Value = 0;
+
+            }
+
+            //actualizacion de checkbox de validacion
+            checkSFT.Checked = chlSuperFloteSelected;
+            if (chlSuperFloteSelected && minDif)
+            { checkExcedente.Checked = minDif; }
+            else { checkExcedente.Checked = false; }
+
+        }
+
     }
 }

@@ -225,7 +225,7 @@
             this.cmbAddProto.FormattingEnabled = true;
             this.cmbAddProto.Location = new System.Drawing.Point(69, 54);
             this.cmbAddProto.Name = "cmbAddProto";
-            this.cmbAddProto.Size = new System.Drawing.Size(188, 23);
+            this.cmbAddProto.Size = new System.Drawing.Size(229, 23);
             this.cmbAddProto.TabIndex = 5;
             // 
             // gpPaso2
@@ -243,7 +243,7 @@
             this.gpPaso2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpPaso2.Location = new System.Drawing.Point(485, 73);
             this.gpPaso2.Name = "gpPaso2";
-            this.gpPaso2.Size = new System.Drawing.Size(293, 218);
+            this.gpPaso2.Size = new System.Drawing.Size(337, 218);
             this.gpPaso2.TabIndex = 6;
             this.gpPaso2.TabStop = false;
             this.gpPaso2.Text = "Paso 2 Relacionar Prototipo - Layer - Piso";
@@ -257,7 +257,7 @@
             this.btnRefresh.FlatAppearance.BorderSize = 0;
             this.btnRefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Location = new System.Drawing.Point(263, 96);
+            this.btnRefresh.Location = new System.Drawing.Point(305, 96);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(23, 23);
             this.btnRefresh.TabIndex = 11;
@@ -314,7 +314,7 @@
             this.cmbAddLayer.FormattingEnabled = true;
             this.cmbAddLayer.Location = new System.Drawing.Point(69, 97);
             this.cmbAddLayer.Name = "cmbAddLayer";
-            this.cmbAddLayer.Size = new System.Drawing.Size(188, 23);
+            this.cmbAddLayer.Size = new System.Drawing.Size(229, 23);
             this.cmbAddLayer.TabIndex = 5;
             this.cmbAddLayer.SelectedIndexChanged += new System.EventHandler(this.cmbAddLayer_SelectedIndexChanged);
             // 
@@ -347,7 +347,7 @@
             "20"});
             this.cmbAddPiso.Location = new System.Drawing.Point(69, 136);
             this.cmbAddPiso.Name = "cmbAddPiso";
-            this.cmbAddPiso.Size = new System.Drawing.Size(188, 23);
+            this.cmbAddPiso.Size = new System.Drawing.Size(229, 23);
             this.cmbAddPiso.TabIndex = 5;
             // 
             // lblAvanzar1
@@ -374,7 +374,7 @@
             this.dtRelacion.Location = new System.Drawing.Point(10, 297);
             this.dtRelacion.Name = "dtRelacion";
             this.dtRelacion.ReadOnly = true;
-            this.dtRelacion.Size = new System.Drawing.Size(768, 122);
+            this.dtRelacion.Size = new System.Drawing.Size(812, 122);
             this.dtRelacion.TabIndex = 10;
             this.dtRelacion.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dtRelacion_UserDeletedRow);
             // 
@@ -524,7 +524,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::PluginInsViviendas_UNO.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(786, 428);
+            this.ClientSize = new System.Drawing.Size(834, 428);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnPaso2);
             this.Controls.Add(this.btnPaso1);

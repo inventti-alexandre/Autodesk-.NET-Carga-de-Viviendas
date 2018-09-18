@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PluginInsViviendas_UNO</RootNamespace>
     <AssemblyName>PluginInsViviendas_UNO</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -36,16 +36,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="accoremgd">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2017\accoremgd.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2017\accoremgd.dll</HintPath>
     </Reference>
     <Reference Include="acdbmgd">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2017\acdbmgd.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2017\acdbmgd.dll</HintPath>
     </Reference>
     <Reference Include="acmgd">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2017\acmgd.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2017\acmgd.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -190,7 +187,9 @@
     <None Include="Service References\soaBulk\PluginInsViviendas_UNO.soaBulk.BulkUploadRs.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\soaBulk\soap1.wsdl" />
+    <None Include="Service References\soaBulk\soap1.wsdl">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\soaFracc\CatFraccionamientos3.wsdl" />
     <None Include="Service References\soaFracc\CatFraccionamientos31.wsdl" />
     <None Include="Service References\soaFracc\CatFraccionamientos32.wsdl" />
@@ -332,6 +331,7 @@
     <None Include="Service References\soaBulk\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Service References\soaBulk\configuration.svcinfo" />
     <None Include="Service References\soaBulk\configuration91.svcinfo" />
@@ -483,6 +483,8 @@
     <None Include="Resources\btnManzana.png" />
     <None Include="Resources\double_arrow_right11.png" />
     <None Include="Resources\double_arrow_left11.png" />
+    <None Include="Resources\database-settings-icon.jpg" />
+    <None Include="Resources\data-protection-icon.png" />
     <Content Include="Resources\LoadingCircle.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

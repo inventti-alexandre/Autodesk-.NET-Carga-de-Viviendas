@@ -190,15 +190,15 @@ namespace PluginInsViviendas_UNO.Vista.Multifamiliar
                                     }
 
                                     break;
+                                    //ya no se aplicara la validacion de piso por prototipo
+                                //case Modelo.IndexColumn.MRSPColPiso:
 
-                                case Modelo.IndexColumn.MRSPColPiso:
+                                //    if (dtCell.Value == cmbAddPiso.SelectedItem)
+                                //    {
+                                //        RepPiso = true;
+                                //    }
 
-                                    if (dtCell.Value == cmbAddPiso.SelectedItem)
-                                    {
-                                        RepPiso = true;
-                                    }
-
-                                    break;
+                                //    break;
 
                             }
                         }

@@ -121,20 +121,20 @@
   <data name="erase" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\erase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ReorderBlueIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ReorderBlueIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="listiconGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\listiconGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="multiple_Select" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\multiple_Select.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="checkblue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\checkblue1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="more1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\more1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LogoOficialNuevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoOficialNuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clear_list1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clear_list2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BlueCheck" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BlueCheck1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,9 +157,6 @@
   <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="clear_list1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clear_list2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="load" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\load.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,8 +169,14 @@
   <data name="checkgray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checkgray1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_1468633294_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1468633294_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="load_dots" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\load-dots.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="database-settings-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database-settings-icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="double_arrow_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\double_arrow_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,35 +187,32 @@
   <data name="ExcelExport" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ExcelExport.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="more1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\more1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="roundedrectangle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\roundedrectangle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btndireccion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btndireccion1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="roundedrectangle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\roundedrectangle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="double_arrow_right1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\double_arrow_right11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="double_arrow_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\double_arrow_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="layers_error" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\layers_error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="uploaded2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uploaded2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_1468633294_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1468633294_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="checkblue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checkblue1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="listiconBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\listiconBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="uploaded2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\uploaded2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="select" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\select.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="double_arrow_left_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\double_arrow_left_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ReorderBlueIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ReorderBlueIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="docleft" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\docleft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,8 +241,14 @@
   <data name="PrototipoAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PrototipoAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="layers_error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\layers_error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Greencheck1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Greencheck1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="double_arrow_left1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\double_arrow_left11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="refreshGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refreshGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,10 +256,10 @@
   <data name="double_arrow_right_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\double_arrow_right_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="double_arrow_right1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\double_arrow_right11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="double_arrow_left_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\double_arrow_left_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="double_arrow_left1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\double_arrow_left11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="data-protection-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data-protection-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

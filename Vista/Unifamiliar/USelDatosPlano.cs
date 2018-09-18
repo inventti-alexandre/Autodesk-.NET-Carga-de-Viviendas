@@ -243,7 +243,7 @@ namespace PluginInsViviendas_UNO.Vista.Unifamiliar
             Point3dCollection pts = new Point3dCollection();
             ObjectIdCollection  IdLotes = new ObjectIdCollection(),
                                 IdNoInteriores = new ObjectIdCollection(),
-                                IdsUnidadPrivativa = new ObjectIdCollection(),
+                                IdsUnidadPrivativa = new ObjectIdCollection(),  
                                 IdsNoOficial = new ObjectIdCollection();
 
             ArrayList listaIdsComparar = new ArrayList();

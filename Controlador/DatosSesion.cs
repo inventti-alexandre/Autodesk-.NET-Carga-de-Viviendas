@@ -9,9 +9,11 @@ namespace PluginInsViviendas_UNO.Controlador
         {
 
             Modelo.EncDatosIniciales.User = Environment.UserName.ToUpper();
-
+                 
             IPHostEntry host;
+
             host = Dns.GetHostEntry(Dns.GetHostName());
+
             foreach (IPAddress ip in host.AddressList)
             {
                 if (ip.AddressFamily.ToString() == "InterNetwork")

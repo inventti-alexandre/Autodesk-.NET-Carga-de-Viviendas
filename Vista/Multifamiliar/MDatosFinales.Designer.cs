@@ -68,12 +68,21 @@
             this.Muestra = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Disponible = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Cablevision = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.PermisoConstruccion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.LadoSol = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.LadoSombra = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.FrenteParque = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.FrenteAvenida = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.EsEsquina = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Regimen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Gravamen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listVPrototipo = new System.Windows.Forms.ListBox();
             this.lblFraccionamiento = new System.Windows.Forms.Label();
             this.lblResConjunto = new System.Windows.Forms.Label();
             this.lblPrototipo = new System.Windows.Forms.Label();
             this.lblConjunto = new System.Windows.Forms.Label();
+            this.btnCondicionesEspeciales = new System.Windows.Forms.Button();
             this.chkCablefull = new System.Windows.Forms.CheckBox();
             this.chkDisponiblefull = new System.Windows.Forms.CheckBox();
             this.chkMuestrafull = new System.Windows.Forms.CheckBox();
@@ -82,6 +91,7 @@
             this.btnIrAtras = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chlSuperFlote = new System.Windows.Forms.CheckedListBox();
             this.btnHome = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -145,7 +155,7 @@
             this.gpPasos.Controls.Add(this.lblpaso1);
             this.gpPasos.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpPasos.ForeColor = System.Drawing.Color.SteelBlue;
-            this.gpPasos.Location = new System.Drawing.Point(622, 12);
+            this.gpPasos.Location = new System.Drawing.Point(755, 12);
             this.gpPasos.Name = "gpPasos";
             this.gpPasos.Size = new System.Drawing.Size(242, 80);
             this.gpPasos.TabIndex = 28;
@@ -311,10 +321,11 @@
             this.cmbSuperFlote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbSuperFlote.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSuperFlote.FormattingEnabled = true;
-            this.cmbSuperFlote.Location = new System.Drawing.Point(100, 13);
+            this.cmbSuperFlote.Location = new System.Drawing.Point(1019, 47);
             this.cmbSuperFlote.Name = "cmbSuperFlote";
             this.cmbSuperFlote.Size = new System.Drawing.Size(61, 22);
             this.cmbSuperFlote.TabIndex = 22;
+            this.cmbSuperFlote.Visible = false;
             this.cmbSuperFlote.SelectedIndexChanged += new System.EventHandler(this.cmbSuperFlote_SelectedIndexChanged);
             this.cmbSuperFlote.MouseHover += new System.EventHandler(this.cmbSuperFlote_MouseHover);
             // 
@@ -391,12 +402,21 @@
             this.VivVerde,
             this.Muestra,
             this.Disponible,
-            this.Cablevision});
+            this.Cablevision,
+            this.PermisoConstruccion,
+            this.LadoSol,
+            this.LadoSombra,
+            this.FrenteParque,
+            this.FrenteAvenida,
+            this.EsEsquina,
+            this.Regimen,
+            this.Gravamen});
             this.dtDatosFinales.GridColor = System.Drawing.Color.DarkGray;
             this.dtDatosFinales.Location = new System.Drawing.Point(11, 137);
             this.dtDatosFinales.Name = "dtDatosFinales";
             this.dtDatosFinales.Size = new System.Drawing.Size(1332, 222);
             this.dtDatosFinales.TabIndex = 16;
+            this.dtDatosFinales.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtDatosFinales_ColumnHeaderMouseClick);
             // 
             // Prototipo
             // 
@@ -483,7 +503,6 @@
             this.VivVerde.HeaderText = "Vivienda Verde";
             this.VivVerde.Name = "VivVerde";
             this.VivVerde.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.VivVerde.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.VivVerde.Width = 75;
             // 
             // Muestra
@@ -499,7 +518,6 @@
             this.Disponible.HeaderText = "Disponible";
             this.Disponible.Name = "Disponible";
             this.Disponible.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Disponible.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Disponible.Width = 75;
             // 
             // Cablevision
@@ -508,13 +526,78 @@
             this.Cablevision.HeaderText = "Cablevisión";
             this.Cablevision.Name = "Cablevision";
             this.Cablevision.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cablevision.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Cablevision.Visible = false;
             this.Cablevision.Width = 75;
+            // 
+            // PermisoConstruccion
+            // 
+            this.PermisoConstruccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PermisoConstruccion.HeaderText = "Permiso de Construcción";
+            this.PermisoConstruccion.Name = "PermisoConstruccion";
+            this.PermisoConstruccion.Visible = false;
+            this.PermisoConstruccion.Width = 75;
+            // 
+            // LadoSol
+            // 
+            this.LadoSol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LadoSol.HeaderText = "Lado Sol";
+            this.LadoSol.Name = "LadoSol";
+            this.LadoSol.Visible = false;
+            this.LadoSol.Width = 75;
+            // 
+            // LadoSombra
+            // 
+            this.LadoSombra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LadoSombra.HeaderText = "Lado Sombra";
+            this.LadoSombra.Name = "LadoSombra";
+            this.LadoSombra.Visible = false;
+            this.LadoSombra.Width = 75;
+            // 
+            // FrenteParque
+            // 
+            this.FrenteParque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FrenteParque.HeaderText = "Frente Parque";
+            this.FrenteParque.Name = "FrenteParque";
+            this.FrenteParque.Visible = false;
+            this.FrenteParque.Width = 75;
+            // 
+            // FrenteAvenida
+            // 
+            this.FrenteAvenida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FrenteAvenida.HeaderText = "Frente Avenida";
+            this.FrenteAvenida.Name = "FrenteAvenida";
+            this.FrenteAvenida.Visible = false;
+            this.FrenteAvenida.Width = 75;
+            // 
+            // EsEsquina
+            // 
+            this.EsEsquina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EsEsquina.HeaderText = "Es Esquina";
+            this.EsEsquina.Name = "EsEsquina";
+            this.EsEsquina.Visible = false;
+            this.EsEsquina.Width = 75;
+            // 
+            // Regimen
+            // 
+            this.Regimen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Regimen.HeaderText = "Régimen";
+            this.Regimen.Name = "Regimen";
+            this.Regimen.Visible = false;
+            this.Regimen.Width = 75;
+            // 
+            // Gravamen
+            // 
+            this.Gravamen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Gravamen.HeaderText = "Gravamen";
+            this.Gravamen.Name = "Gravamen";
+            this.Gravamen.Visible = false;
+            this.Gravamen.Width = 75;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox1.Controls.Add(this.btnCondicionesEspeciales);
             this.groupBox1.Controls.Add(this.listVPrototipo);
             this.groupBox1.Controls.Add(this.lblResFideicomiso);
             this.groupBox1.Controls.Add(this.lblFideicomiso);
@@ -593,6 +676,22 @@
             this.lblConjunto.TabIndex = 5;
             this.lblConjunto.Text = "Conjunto: ";
             // 
+            // btnCondicionesEspeciales
+            // 
+            this.btnCondicionesEspeciales.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCondicionesEspeciales.BackColor = System.Drawing.Color.Transparent;
+            this.btnCondicionesEspeciales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnCondicionesEspeciales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCondicionesEspeciales.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnCondicionesEspeciales.ForeColor = System.Drawing.Color.Black;
+            this.btnCondicionesEspeciales.Location = new System.Drawing.Point(474, 90);
+            this.btnCondicionesEspeciales.Name = "btnCondicionesEspeciales";
+            this.btnCondicionesEspeciales.Size = new System.Drawing.Size(125, 21);
+            this.btnCondicionesEspeciales.TabIndex = 43;
+            this.btnCondicionesEspeciales.Text = "Condiciones Especiales";
+            this.btnCondicionesEspeciales.UseVisualStyleBackColor = false;
+            this.btnCondicionesEspeciales.Click += new System.EventHandler(this.btnCondicionesEspeciales_Click);
+            // 
             // chkCablefull
             // 
             this.chkCablefull.AutoSize = true;
@@ -603,6 +702,7 @@
             this.chkCablefull.Size = new System.Drawing.Size(12, 11);
             this.chkCablefull.TabIndex = 17;
             this.chkCablefull.UseVisualStyleBackColor = false;
+            this.chkCablefull.Visible = false;
             this.chkCablefull.CheckedChanged += new System.EventHandler(this.chkCablefull_CheckedChanged);
             this.chkCablefull.MouseHover += new System.EventHandler(this.chkCablefull_MouseHover);
             // 
@@ -616,6 +716,7 @@
             this.chkDisponiblefull.Size = new System.Drawing.Size(12, 11);
             this.chkDisponiblefull.TabIndex = 18;
             this.chkDisponiblefull.UseVisualStyleBackColor = false;
+            this.chkDisponiblefull.Visible = false;
             this.chkDisponiblefull.CheckedChanged += new System.EventHandler(this.chkDisponiblefull_CheckedChanged);
             this.chkDisponiblefull.MouseHover += new System.EventHandler(this.chkDisponiblefull_MouseHover);
             // 
@@ -629,6 +730,7 @@
             this.chkMuestrafull.Size = new System.Drawing.Size(12, 11);
             this.chkMuestrafull.TabIndex = 19;
             this.chkMuestrafull.UseVisualStyleBackColor = false;
+            this.chkMuestrafull.Visible = false;
             this.chkMuestrafull.CheckedChanged += new System.EventHandler(this.chkMuestrafull_CheckedChanged);
             this.chkMuestrafull.MouseHover += new System.EventHandler(this.chkMuestrafull_MouseHover);
             // 
@@ -642,6 +744,7 @@
             this.chkVivVerdefull.Size = new System.Drawing.Size(12, 11);
             this.chkVivVerdefull.TabIndex = 20;
             this.chkVivVerdefull.UseVisualStyleBackColor = false;
+            this.chkVivVerdefull.Visible = false;
             this.chkVivVerdefull.CheckedChanged += new System.EventHandler(this.chkVivVerdefull_CheckedChanged);
             this.chkVivVerdefull.MouseHover += new System.EventHandler(this.chkVivVerdefull_MouseHover);
             // 
@@ -651,9 +754,9 @@
             this.btnAsignSPFT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAsignSPFT.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsignSPFT.ForeColor = System.Drawing.Color.Black;
-            this.btnAsignSPFT.Location = new System.Drawing.Point(167, 13);
+            this.btnAsignSPFT.Location = new System.Drawing.Point(6, 90);
             this.btnAsignSPFT.Name = "btnAsignSPFT";
-            this.btnAsignSPFT.Size = new System.Drawing.Size(64, 21);
+            this.btnAsignSPFT.Size = new System.Drawing.Size(115, 21);
             this.btnAsignSPFT.TabIndex = 31;
             this.btnAsignSPFT.Text = "Selección";
             this.btnAsignSPFT.UseVisualStyleBackColor = false;
@@ -682,25 +785,36 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(6, 17);
+            this.label1.Location = new System.Drawing.Point(1017, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 33;
             this.label1.Text = "Superf. lote Tipo:";
+            this.label1.Visible = false;
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.cmbSuperFlote);
+            this.groupBox2.Controls.Add(this.chlSuperFlote);
             this.groupBox2.Controls.Add(this.btnAsignSPFT);
             this.groupBox2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.groupBox2.Location = new System.Drawing.Point(622, 94);
+            this.groupBox2.Location = new System.Drawing.Point(622, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(242, 40);
+            this.groupBox2.Size = new System.Drawing.Size(127, 122);
             this.groupBox2.TabIndex = 34;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Superf lote Tipo";
+            // 
+            // chlSuperFlote
+            // 
+            this.chlSuperFlote.CheckOnClick = true;
+            this.chlSuperFlote.FormattingEnabled = true;
+            this.chlSuperFlote.Location = new System.Drawing.Point(6, 21);
+            this.chlSuperFlote.Name = "chlSuperFlote";
+            this.chlSuperFlote.Size = new System.Drawing.Size(115, 58);
+            this.chlSuperFlote.TabIndex = 55;
+            this.chlSuperFlote.SelectedIndexChanged += new System.EventHandler(this.chlSuperFlote_SelectedIndexChanged);
             // 
             // btnHome
             // 
@@ -748,6 +862,8 @@
             this.BackgroundImage = global::PluginInsViviendas_UNO.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1355, 413);
+            this.Controls.Add(this.cmbSuperFlote);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnHome);
@@ -783,7 +899,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -827,6 +942,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox checkM2Cons;
+        private System.Windows.Forms.CheckBox checkExcedente;
+        private System.Windows.Forms.CheckBox checkSFT;
+        private System.Windows.Forms.Button btnCondicionesEspeciales;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prototipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Manzana;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lote;
@@ -843,10 +964,14 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn Muestra;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Disponible;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Cablevision;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkM2Cons;
-        private System.Windows.Forms.CheckBox checkExcedente;
-        private System.Windows.Forms.CheckBox checkSFT;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn PermisoConstruccion;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn LadoSol;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn LadoSombra;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn FrenteParque;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn FrenteAvenida;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn EsEsquina;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Regimen;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Gravamen;
+        private System.Windows.Forms.CheckedListBox chlSuperFlote;
     }
 }
